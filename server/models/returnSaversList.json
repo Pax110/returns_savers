@@ -1,0 +1,56 @@
+[
+    {
+      "orderId"  :"001",
+      "orderDate" : "Nov 21, 2021",
+      "productName" : "T-Shirt",
+      "productPrice" : 20.00,
+      "productDescription" : "Casual tshirt cotton",
+      "productSize" : "XL",
+      "productColor" : "white",
+      "productQuantity" : 1,
+      "returnEligibility" : true
+    },
+    {
+        "orderId"  :"002",
+        "orderDate" : "Nov 21, 2021",
+        "productName" : "T-Shirt",
+        "productPrice" : 20.00,
+        "productDescription" : "Casual tshirt cotton",
+        "productSize" : "XL",
+        "productColor" : "white",
+        "productQuantity" : 1,
+        "returnEligibility" : true
+      },
+      {
+        "orderId"  :"003",
+        "orderDate" : "Nov 05, 2021",
+        "productName" : "Shirt",
+        "productPrice" : 20.00,
+        "productDescription" : "Casual tshirt cotton",
+        "productSize" : "XL",
+        "productColor" : "white",
+        "productQuantity" : 1,
+        "returnEligibility" : true
+      },{
+        "orderId"  :"004",
+        "orderDate" : "Nov 21, 2021",
+        "productName" : "T-Shirt",
+        "productPrice" : 20.00,
+        "productDescription" : "Casual tshirt cotton",
+        "productSize" : "XL",
+        "productColor" : "white",
+        "productQuantity" : 1,
+        "returnEligibility" : true
+      },
+      {
+        "orderId"  :"005",
+        "orderDate" : "Nov 21, 2021",
+        "productName" : "T-Shirt",
+        "productPrice" : 20.00,
+        "productDescription" : "Casual tshirt cotton",
+        "productSize" : "XL",
+        "productColor" : "white",
+        "productQuantity" : 1,
+        "returnEligibility" : true
+      }
+]

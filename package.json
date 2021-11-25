@@ -1,16 +1,15 @@
 {
   "name": "returns_savers",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-      "install": "npm run install-client && npm run install-server",
-      "install-client": "cd client && npm install && cd ..",
-      "install-server": "cd server && npm install && cd ..",
-      "build": "npm run build-client",
-      "build-client": "cd client && npm run build && cd ..",
-      "start": "npm run start-server",
-      "start-server": "cd server && npm start && cd .."
+    "install": "npm run install-client && npm run install-server",
+    "install-client": "cd client && npm install && cd ..",
+    "install-server": "cd server && npm install && cd ..",
+    "build": "npm run build-client",
+    "build-client": "cd client && npm run build && cd ..",
+    "start": "npm run start-server",
+    "start-server": "cd server && npm start && cd .."
   },
   "keywords": [],
   "author": "",
@@ -18,5 +17,14 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^6.0.13"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pax110/returns_savers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pax110/returns_savers/issues"
+  },
+  "homepage": "https://github.com/Pax110/returns_savers#readme",
+  "description": ""
 }

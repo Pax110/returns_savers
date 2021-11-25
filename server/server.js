@@ -4,6 +4,7 @@ const returnSaverRoutes = require('./routes/returnSaversRoutes')
 const app = express()
 const port = 5000
 
+app.use(express.json())
 app.use('/api',returnSaverRoutes)
 app.use('/', express.static('../client/build'))
 

@@ -8,49 +8,54 @@
       "productSize" : "XL",
       "productColor" : "white",
       "productQuantity" : 1,
+      "ReasonToReturn" : "Size didn't fit",
       "returnEligibility" : true
     },
     {
-        "orderId"  :"002",
-        "orderDate" : "Nov 21, 2021",
-        "productName" : "T-Shirt",
-        "productPrice" : 20.00,
-        "productDescription" : "Casual tshirt cotton",
-        "productSize" : "XL",
-        "productColor" : "white",
-        "productQuantity" : 1,
-        "returnEligibility" : true
-      },
-      {
-        "orderId"  :"003",
-        "orderDate" : "Nov 05, 2021",
-        "productName" : "Shirt",
-        "productPrice" : 20.00,
-        "productDescription" : "Casual tshirt cotton",
-        "productSize" : "XL",
-        "productColor" : "white",
-        "productQuantity" : 1,
-        "returnEligibility" : true
-      },{
-        "orderId"  :"004",
-        "orderDate" : "Nov 21, 2021",
-        "productName" : "T-Shirt",
-        "productPrice" : 20.00,
-        "productDescription" : "Casual tshirt cotton",
-        "productSize" : "XL",
-        "productColor" : "white",
-        "productQuantity" : 1,
-        "returnEligibility" : true
-      },
-      {
-        "orderId"  :"005",
-        "orderDate" : "Nov 21, 2021",
-        "productName" : "T-Shirt",
-        "productPrice" : 20.00,
-        "productDescription" : "Casual tshirt cotton",
-        "productSize" : "XL",
-        "productColor" : "white",
-        "productQuantity" : 1,
-        "returnEligibility" : true
-      }
+      "orderId"  :"002",
+      "orderDate" : "Nov 09, 2021",
+      "productName" : "Laptop",
+      "productPrice" : 820.00,
+      "productDescription" : "Ausus",
+      "productSize" : "15'",
+      "productColor" : "silver",
+      "productQuantity" : 1,
+      "ReasonToReturn" : "Item arrived too late",
+      "returnEligibility" : true
+    },
+    {
+      "orderId"  :"003",
+      "orderDate" : "Dec 25, 2021",
+      "productName" : "ChristmasTree",
+      "productPrice" : 320.00,
+      "productDescription" : "Christmas decoration tree",
+      "productSize" : "L",
+      "productColor" : "green",
+      "productQuantity" : 1,
+      "ReasonToReturn": "Damaged",
+      "returnEligibility" : true
+    },{
+      "orderId"  :"004",
+      "orderDate" : "Jan 01, 2021",
+      "productName" : "Monitors",
+      "productPrice" : 120.00,
+      "productDescription" : "15' Big Monitor",
+      "productSize" : "L",
+      "productColor" : "white",
+      "productQuantity" : 2,
+      "ReasonToReturn" : "No longer needed",
+      "returnEligibility" : true
+    },
+    {
+      "orderId"  :"005",
+      "orderDate" : "Nov 21, 2021",
+      "productName" : "Jacket",
+      "productPrice" : 220.00,
+      "productDescription" : "Winter jacket",
+      "productSize" : "XL",
+      "productColor" : "Brown",
+      "productQuantity" : 1,
+      "ReasonToReturn" : "Wrong item was sent",
+      "returnEligibility" : true
+    }
 ]

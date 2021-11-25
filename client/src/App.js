@@ -1,52 +1,37 @@
-import {useState, useEffect } from 'react'
+import {useState } from 'react'
+import ReturnSaversDetail from './components/ReturnSaversDetail';
+import ReturnSaversList from './components/ReturnSaversList';
 import './App.css';
 
-const ReturnSaversRow = ({ orderId, productName, productPrice }) => (
-  <tr>
-    <td>{orderId}</td>
-    <td>{productName}</td>
-    <td>{productPrice}</td>
-  </tr>
-)    
-
-
 function App() {
-  const [returnSavers, setReturnSavers] = useState([]) // not sure how to use initially before loading data from db
-  useEffect(() => {
-    async function fetchData() {
-      console.log('Fetching return savers data!')
-      let fetchResult = await fetch("/api/returnSavers")
-      let returnSaversList = await fetchResult.json()
-      console.log(returnSaversList)
-      setReturnSavers(returnSaversList)
-    }  
-    fetchData()
-  }, [])
-
+  
+  const[selectedProductReturnId,setSelectedProductReturnId] = useState() //619d2b43382f586cb987a3da
   return (
     <div className="App">
-      <h1>Return Savers List</h1>
-      <table style={{ margin: "auto" }}>
-        <thead>
-          <tr>
-            <th>OrderId</th>           
-            <th>ProductName</th>
-            <th>ProductPrice</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>{
+      {/* {
+        selectedProductReturnId?
+        <div>
+          <button onClick={()=> setSelectedProductReturnId(undefined)}>Go Back</button>
+          <ReturnSaversDetail productReturnId={selectedProductReturnId} />
+        </div>
+        :
+        <ReturnSaversList setSelectedProductReturnId={setSelectedProductReturnId} />
+      } */}
 
-            returnSavers.map((returnproduct, index) => (
-              <ReturnSaversRow key={index} orderId={returnproduct.orderId}
-                                productName={returnproduct.productName} productPrice={returnproduct.productPrice} />
-            ))
-            }
-            
-           
-          </tr>
-        </tbody>
-      </table>
+      {
+        !selectedProductReturnId && 
+        <div>
+          <ReturnSaversList setSelectedProductReturnId={setSelectedProductReturnId} />
+        </div>
+      }
+      {
+        selectedProductReturnId && 
+        <div>
+          <button onClick={() => setSelectedProductReturnId(undefined)}>Go Back</button>
+          <ReturnSaversDetail productReturnId={selectedProductReturnId} />
+        </div>
+      }
+      
     </div>
   );
 }

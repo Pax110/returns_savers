@@ -9,11 +9,11 @@ router.get('/returnSavers', async (req, res) => {
     res.send(returnSaversList)
 })
 
-// router.get('/returnSavers/:id', async (req, res) => {
-//     let id =req.params.id
-//     let superhero = await superheroModel.findById(id)
-//     res.send(superhero)
-// })
+router.get('/returnSavers/:id', async (req, res) => {
+    let id =req.params.id
+    let returnSavers = await returnSaversModel.findById(id)
+    res.send(returnSavers)
+})
 
 
 module.exports = router

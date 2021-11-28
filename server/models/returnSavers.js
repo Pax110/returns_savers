@@ -24,7 +24,13 @@ async function listReturnProduct() {
     return ReturnSavers.find({})
 }
 
+async function findById(id) {
+    return ReturnSavers.findById(id)
+    
+}
+
 module.exports = {
     createReturnSavers,
-    listReturnProduct
+    listReturnProduct,
+    findById
 }

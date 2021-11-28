@@ -13,3 +13,7 @@
     text-align: left;
     margin: 0em;
 }
+
+.register-field-value {
+    width: 20em;
+}

@@ -1,6 +1,7 @@
 import {useState } from 'react'
 import ReturnSaversDetail from './components/ReturnSaversDetail';
 import ReturnSaversList from './components/ReturnSaversList';
+import RegisterForm from './components/Register'
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {
         !selectedProductReturnId && 
         <div>
+          <RegisterForm />
           <ReturnSaversList setSelectedProductReturnId={setSelectedProductReturnId} />
         </div>
       }

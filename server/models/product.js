@@ -1,3 +1,4 @@
+//Andrea2.0 created Nov 28th
 const mongoose = require('mongoose')
 
 const productSchema = new mongoose.Schema({

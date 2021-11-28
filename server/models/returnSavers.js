@@ -11,11 +11,10 @@ const ReturnSavers = mongoose.model('ReturnSavers',
       "productSize" : String,
       "productColor" : String,
       "productQuantity" : Number,
-      "reasonToReturn": String,
-      "returnEligibility" : {
-          type: Boolean,
-          default : true
-    }
+      "mainReasonToReturn": String,
+      "secondaryReasonToReturn": String,
+      "otherReasonToReturn": String,
+      "returnEligibility" : String
 }
 )
 //

@@ -1,11 +1,12 @@
 import {useState, useEffect } from 'react'
 
-const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, onProductReturnSelected }) => (
+const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, returnEligibility, onProductReturnSelected }) => (
     <tr onClick={() => onProductReturnSelected()}>
       <td>{orderId}</td>
       <td>{orderDate}</td>
       <td>{productName}</td>
       <td>{productPrice}</td>
+      <td>{returnEligibility}</td> 
     </tr>
   )    
   
@@ -31,6 +32,7 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, onProd
             <th>OrderDate</th>          
             <th>ProductName</th>
             <th>ProductPrice</th>
+            <th>ReturnEligibility</th>
           </tr>
         </thead>
         <tbody>
@@ -46,7 +48,8 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, onProd
                     orderId={returnproduct.orderId}
                     orderDate ={new Date(returnproduct.orderDate).toLocaleDateString('en-CA', {year : 'numeric', month: 'short', day: 'numeric'})}
                     productName={returnproduct.productName} 
-                    productPrice={'$'+returnproduct.productPrice.toFixed(2)} />
+                    productPrice={'$'+returnproduct.productPrice}  //.ToFixed(2) not worked in List
+                    returnEligibility={returnproduct.returnEligibility} />
             })           
             }
   
@@ -56,4 +59,5 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, onProd
     )
   }
 
+  //
   export default ReturnSaversList

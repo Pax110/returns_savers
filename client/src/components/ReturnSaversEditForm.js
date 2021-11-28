@@ -10,7 +10,9 @@ const ReturnSaversEditForm = () => {
     const [productSize, setProductSize] = useState('')
     const [productColor, setProductColor] = useState('')
     const [productQuantity, setProductQuantity] = useState('')
-    const [reasonToReturn, setReasonToReturn] = useState('')    
+    const [mainReasonToReturn, setMainReasonToReturn] = useState('') 
+    const [secondaryReasonToReturn, setSecondaryReasonToReturn] = useState('') 
+    const [otherReasonToReturn, setOtherReasonToReturn] = useState('')    
    // const [returnEligibility, setReturnEligibility] = useState('')
 
     function onInputUpdate(event, setter) {
@@ -20,11 +22,12 @@ const ReturnSaversEditForm = () => {
 
     async function postData() {
         let newReturnProduct = {
-            orderId, orderDate, productName, productPrice, productDescription, productSize, productColor, productQuantity, reasonToReturn
+            orderId, orderDate, productName, productPrice, productDescription, productSize, productColor, productQuantity, mainReasonToReturn,
+            secondaryReasonToReturn, otherReasonToReturn
         }
         //returnEligibility
 
-        
+
         console.log('Saving New Return', newReturnProduct)
         fetch('/api/returnSavers', {
             method: "POST",
@@ -55,10 +58,37 @@ const ReturnSaversEditForm = () => {
                 <input value={productColor} onChange={(event) => onInputUpdate(event, setProductColor) } />
                 <label className="field-title">Product Quantity</label>
                 <input value={productQuantity} onChange={(event) => onInputUpdate(event, setProductQuantity) } />
-                <label className="field-title">Reason To Return</label>
-                <input value={reasonToReturn} onChange={(event) => onInputUpdate(event, setReasonToReturn) } />
+                 <label className="field-title">Main Reason To Return</label>
+                 <select  onChange={(event)=> onInputUpdate(event, setMainReasonToReturn)} >
+                    <option>Select</option>
+                    <option value="Bought it by mistake">Bought it by mistake</option>
+                    <option value="Better price available">Better price available</option>
+                    <option value="Items arrived too late">Items arrived too late</option>
+                    <option value="Product used for a week">Product used for a week</option>
+                    <option value="Product damaged">Product damaged</option>
+                 </select>
+                 <label className="field-title">Secondary Reason To Return</label>
+                 <select  onChange={(event)=> onInputUpdate(event, setSecondaryReasonToReturn)} >
+                    <option>Select</option>
+                    <option value="Bought it by mistake">Bought it by mistake</option>
+                    <option value="Better price available">Better price available</option>
+                    <option value="Items arrived too late">Items arrived too late</option>
+                    <option value="Product used for a week">Product used for a week</option>
+                    <option value="Product damaged">Product damaged</option>
+                 </select>
+                 <label className="field-title">Other Reason To Return</label>
+                 <select  onChange={(event)=> onInputUpdate(event, setOtherReasonToReturn)} >
+                    <option>Select</option>
+                    <option value="Bought it by mistake">Bought it by mistake</option>
+                    <option value="Better price available">Better price available</option>
+                    <option value="Items arrived too late">Items arrived too late</option>
+                    <option value="Product used for a week">Product used for a week</option>
+                    <option value="Product damaged">Product damaged</option>
+                 </select>
+                {/*<input value={reasonToReturn} onChange={(event) => onInputUpdate(event, setReasonToReturn) } /> */}
                 {/* <label className="field-title">Return Eligibility</label>
                 <input value={returnEligibility} onChange={(event) => onInputUpdate(event, setReturnEligibility) } /> */}
+                <br/>
                 <button onClick={postData}>Save New Return</button>
             </div>
 

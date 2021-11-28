@@ -8,8 +8,10 @@
       "productSize" : "XL",
       "productColor" : "white",
       "productQuantity" : 1,
-      "ReasonToReturn" : "Size didn't fit",
-      "returnEligibility" : true
+      "mainReasonToReturn": "",
+      "secondaryReasonToReturn": "",
+      "otherReasonToReturn": "",
+      "returnEligibility" : "Approved"
     },
     {
       "orderId"  :"002",
@@ -20,8 +22,8 @@
       "productSize" : "15'",
       "productColor" : "silver",
       "productQuantity" : 1,
-      "ReasonToReturn" : "Item arrived too late",
-      "returnEligibility" : true
+      "reasonToReturn" : "Item arrived too late",
+      "returnEligibility" : "Approved"
     },
     {
       "orderId"  :"003",
@@ -32,8 +34,8 @@
       "productSize" : "L",
       "productColor" : "green",
       "productQuantity" : 1,
-      "ReasonToReturn": "Damaged",
-      "returnEligibility" : true
+      "reasonToReturn": "Damaged",
+      "returnEligibility" : "Approved"
     },{
       "orderId"  :"004",
       "orderDate" : "Jan 01, 2021",
@@ -43,8 +45,8 @@
       "productSize" : "L",
       "productColor" : "white",
       "productQuantity" : 2,
-      "ReasonToReturn" : "No longer needed",
-      "returnEligibility" : true
+      "reasonToReturn" : "No longer needed",
+      "returnEligibility" : "Approved"
     },
     {
       "orderId"  :"005",
@@ -55,7 +57,7 @@
       "productSize" : "XL",
       "productColor" : "Brown",
       "productQuantity" : 1,
-      "ReasonToReturn" : "Wrong item was sent",
-      "returnEligibility" : true
+      "reasonToReturn" : "Wrong item was sent",
+      "returnEligibility" : "Approved"
     }
 ]

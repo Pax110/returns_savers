@@ -14,6 +14,18 @@ router.get('/returnSavers/:id', async (req, res) => {
     let returnSavers = await returnSaversModel.findById(id)
     res.send(returnSavers)
 })
+router.post('/returnSavers', async (req, res) => {
+    let newReturnProduct =  req.body
+    console.log('NewReturnProduct', newReturnProduct)
+    let createdId=""
+    try {
+        createdId = await returnSaversModel.createReturnSavers(newReturnProduct)
+    } catch (error) {
+       console.log(error) 
+    }
+
+    res.send(createdId)
+})
 
 
 module.exports = router

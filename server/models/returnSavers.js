@@ -10,9 +10,12 @@ const ReturnSavers = mongoose.model('ReturnSavers',
       "productSize" : String,
       "productColor" : String,
       "productQuantity" : Number,
-      "ReasonToReturn":String,
-      "returnEligibility" : Boolean
+      "reasonToReturn": String,
+      "returnEligibility" : {
+          type: Boolean,
+          default : true
     }
+}
 )
 
 async function createReturnSavers(returnSaversData) {

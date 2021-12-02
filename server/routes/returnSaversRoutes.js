@@ -45,11 +45,11 @@ router.post('/returnSavers/:id', async (req, res) => {
     let id =req.params.id
     let updatedReturnProduct = req.body
     console.log('Updating return product', id, " with ", updatedReturnProduct)
-        let accessAnswerOne = newReturnProduct.mainReasonToReturn
-        let accessAnswerTwo = newReturnProduct.secondaryReasonToReturn
-        let accessAnswerThree = newReturnProduct.otherReasonToReturn        
+        let accessAnswerOne = updatedReturnProduct.mainReasonToReturn
+        let accessAnswerTwo = updatedReturnProduct.secondaryReasonToReturn
+        let accessAnswerThree = updatedReturnProduct.otherReasonToReturn        
         let status = logicReturn.returnLogic(accessAnswerOne,accessAnswerTwo,accessAnswerThree)
-        newReturnProduct.returnEligibility = status
+        updatedReturnProduct.returnEligibility = status
         console.log(status)
     let returnSavers = await returnSaversModel.update(id, updatedReturnProduct)
     res.send(returnSavers)

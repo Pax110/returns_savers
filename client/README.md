@@ -71,5 +71,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 npm install
+npm install react-router-dom
+npm install bootstrap react-bootstrap
 npm run build
 npm start
+

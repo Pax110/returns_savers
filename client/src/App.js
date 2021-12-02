@@ -1,6 +1,6 @@
 
 import { Routes, Route, Link } from 'react-router-dom'
-
+import Navbar from './components/sidebar/Navbar'
 import './App.css';
 import CreateReturnSaversPage from './pages/CreateReturnSaversPage'
 import ReturnSaversDetailPage from './pages/ReturnSaversDetailPage';
@@ -11,7 +11,7 @@ function App() {
   
   return (
     <div className="App">
-    <nav>
+    {/* <nav>
     <ul>
       <li>
         <Link to="/" >Home</Link>
@@ -20,7 +20,8 @@ function App() {
         <Link to="/new">New</Link>
       </li>
     </ul>
-    </nav>
+    </nav> */}
+    <Navbar />
     <Routes>
       <Route path="/" element={<ReturnSaversListPage /> }/>
       <Route path="/new" element={<CreateReturnSaversPage />}/>

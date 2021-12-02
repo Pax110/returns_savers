@@ -1,18 +1,23 @@
+//random comment 28th Nov test
 const mongoose = require('./mongooseDb')
 
 const ReturnSavers = mongoose.model('ReturnSavers',
     {
       "orderId"  :String,
-      "orderDate" : String,
+      "orderDate" : Date,
       "productName" : String,
       "productPrice" : Number,
       "productDescription" : String,
       "productSize" : String,
       "productColor" : String,
       "productQuantity" : Number,
-      "returnEligibility" : Boolean
-    }
+      "mainReasonToReturn": String,
+      "secondaryReasonToReturn": String,
+      "otherReasonToReturn": String,
+      "returnEligibility" : String
+}
 )
+//
 
 async function createReturnSavers(returnSaversData) {
     let newReturnSavers = new ReturnSavers(returnSaversData)
@@ -24,7 +29,18 @@ async function listReturnProduct() {
     return ReturnSavers.find({})
 }
 
+async function findById(id){
+    return ReturnSavers.findById(id)
+}
+
+async function update(id, updatedReturnProduct){
+    return ReturnSavers.findByIdAndUpdate(id, updatedReturnProduct, {
+        returnDocument: "after"
+    })
+}
 module.exports = {
     createReturnSavers,
-    listReturnProduct
+    listReturnProduct, 
+    findById,
+    update
 }

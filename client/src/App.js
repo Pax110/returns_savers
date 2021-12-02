@@ -1,52 +1,33 @@
-import {useState, useEffect } from 'react'
+
+import { Routes, Route, Link } from 'react-router-dom'
+
 import './App.css';
-
-const ReturnSaversRow = ({ orderId, productName, productPrice }) => (
-  <tr>
-    <td>{orderId}</td>
-    <td>{productName}</td>
-    <td>{productPrice}</td>
-  </tr>
-)    
-
+import CreateReturnSaversPage from './pages/CreateReturnSaversPage'
+import ReturnSaversDetailPage from './pages/ReturnSaversDetailPage';
+import ReturnSaversEditPage from './pages/ReturnSaversEditPage';
+import ReturnSaversListPage from './pages/ReturnSaversListPage';
 
 function App() {
-  const [returnSavers, setReturnSavers] = useState([]) // not sure how to use initially before loading data from db
-  useEffect(() => {
-    async function fetchData() {
-      console.log('Fetching return savers data!')
-      let fetchResult = await fetch("/api/returnSavers")
-      let returnSaversList = await fetchResult.json()
-      console.log(returnSaversList)
-      setReturnSavers(returnSaversList)
-    }  
-    fetchData()
-  }, [])
-
+  
   return (
     <div className="App">
-      <h1>Return Savers List</h1>
-      <table style={{ margin: "auto" }}>
-        <thead>
-          <tr>
-            <th>OrderId</th>           
-            <th>ProductName</th>
-            <th>ProductPrice</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>{
-
-            returnSavers.map((returnproduct, index) => (
-              <ReturnSaversRow key={index} orderId={returnproduct.orderId}
-                                productName={returnproduct.productName} productPrice={returnproduct.productPrice} />
-            ))
-            }
-            
-           
-          </tr>
-        </tbody>
-      </table>
+    <nav>
+    <ul>
+      <li>
+        <Link to="/" >Home</Link>
+      </li>
+      <li>
+        <Link to="/new">New</Link>
+      </li>
+    </ul>
+    </nav>
+    <Routes>
+      <Route path="/" element={<ReturnSaversListPage /> }/>
+      <Route path="/new" element={<CreateReturnSaversPage />}/>
+      <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
+      <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
+    </Routes>
+          
     </div>
   );
 }

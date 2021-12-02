@@ -33,8 +33,14 @@ async function findById(id){
     return ReturnSavers.findById(id)
 }
 
+async function update(id, updatedReturnProduct){
+    return ReturnSavers.findByIdAndUpdate(id, updatedReturnProduct, {
+        returnDocument: "after"
+    })
+}
 module.exports = {
     createReturnSavers,
     listReturnProduct, 
-    findById
+    findById,
+    update
 }

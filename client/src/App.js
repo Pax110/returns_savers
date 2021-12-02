@@ -8,6 +8,32 @@ import ReturnSaversEditForm from './components/ReturnSaversEditForm';
 function App() {
   
   const[selectedProductReturnId,setSelectedProductReturnId] = useState() //619d2b43382f586cb987a3da
+
+  // let defaultReturnSavers = {
+  //   orderId: "1234",
+  //   orderDate: "Nov 29, 2020",
+  //   productName: "Pen",
+  //   productPrice : 5,
+  //   productDescription : "Something to write",
+  //   productSize: "s",
+  //   productColor : "blue",
+  //   productQuantity : 1,
+  //   mainReasonToReturn : "mainreason",
+  //   secondaryReasonToReturn : "secondreason",
+  //   otherReasonToReturn: "other Reason"
+
+  // }
+  async function createReturnSavers(newReturnProduct){
+    
+        fetch('/api/returnSavers', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newReturnProduct)
+        })
+  }
+
   return (
     <div className="App">
       {/* {
@@ -25,7 +51,7 @@ function App() {
         <div>
           <RegisterForm />
           <ReturnSaversList setSelectedProductReturnId={setSelectedProductReturnId} />
-          <ReturnSaversEditForm/>
+          <ReturnSaversEditForm onSave={createReturnSavers}/>
         </div>
       }
       {

@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './ReturnSaversDetail.css'
 
-const ReturnSaversEditForm = () => {
+const ReturnSaversEditForm = ({existingValues, onSave}) => {
     const [orderId, setOrderId] = useState('')
     const [orderDate, setOrderDate] = useState('')
     const [productName, setProductName] = useState('')
@@ -15,6 +15,22 @@ const ReturnSaversEditForm = () => {
     const [otherReasonToReturn, setOtherReasonToReturn] = useState('')    
    // const [returnEligibility, setReturnEligibility] = useState('')
 
+    useEffect(() => {
+        if(existingValues){
+            setOrderId(existingValues.orderId)
+            setOrderDate(existingValues.orderDate)
+            setProductName(existingValues.productName)
+            setProductPrice(existingValues.productPrice)
+            setProductDescription(existingValues.productDescription)
+            setProductSize(existingValues.productSize)
+            setProductColor(existingValues.productColor)
+            setProductQuantity(existingValues.productQuantity)
+            setMainReasonToReturn(existingValues.mainReasonToReturn)
+            setSecondaryReasonToReturn(existingValues.secondaryReasonToReturn)
+            setOtherReasonToReturn(existingValues.otherReasonToReturn)
+        }
+    }, [existingValues])
+
     function onInputUpdate(event, setter) {
         let newValue = event.target.value
         setter(newValue)
@@ -26,16 +42,8 @@ const ReturnSaversEditForm = () => {
             secondaryReasonToReturn, otherReasonToReturn
         }
         //returnEligibility
-
-
-        console.log('Saving New Return', newReturnProduct)
-        fetch('/api/returnSavers', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newReturnProduct)
-        })
+        await onSave(newReturnProduct)
+        
     }
 
     return (

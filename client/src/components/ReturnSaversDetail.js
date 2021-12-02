@@ -1,6 +1,5 @@
 import {useState, useEffect } from 'react'
 import './ReturnSaversDetail.css'
-import ReturnSaversEditForm from './ReturnSaversEditForm'
 
 
 const ReturnSaversDetail = ({productReturnId}) => {
@@ -15,17 +14,6 @@ const ReturnSaversDetail = ({productReturnId}) => {
       }
       fetchReturns()
     },[productReturnId])
-
-    async function updateReturnSavers(updatedReturnProduct){
-      console.log('Posting to returnsavers id', productReturnId, 'with data', updatedReturnProduct)
-      fetch('/api/returnSavers/'+productReturnId, {
-          method: "POST",
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(updatedReturnProduct)
-      })
-}
 
     return(
       <div>
@@ -42,7 +30,7 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="field-title">returnEligibility</div>
             <div className="field-value">{returns?.returnEligibility}</div>
         </div>
-        <ReturnSaversEditForm existingValues={returns} onSave={updateReturnSavers}/>
+        
       </div>
     )
   }

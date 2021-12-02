@@ -1,67 +1,33 @@
-import {useState } from 'react'
-import ReturnSaversDetail from './components/ReturnSaversDetail';
-import ReturnSaversList from './components/ReturnSaversList';
-import RegisterForm from './components/Register'
+
+import { Routes, Route, Link } from 'react-router-dom'
+
 import './App.css';
-import ReturnSaversEditForm from './components/ReturnSaversEditForm';
+import CreateReturnSaversPage from './pages/CreateReturnSaversPage'
+import ReturnSaversDetailPage from './pages/ReturnSaversDetailPage';
+import ReturnSaversEditPage from './pages/ReturnSaversEditPage';
+import ReturnSaversListPage from './pages/ReturnSaversListPage';
 
 function App() {
   
-  const[selectedProductReturnId,setSelectedProductReturnId] = useState() //619d2b43382f586cb987a3da
-
-  // let defaultReturnSavers = {
-  //   orderId: "1234",
-  //   orderDate: "Nov 29, 2020",
-  //   productName: "Pen",
-  //   productPrice : 5,
-  //   productDescription : "Something to write",
-  //   productSize: "s",
-  //   productColor : "blue",
-  //   productQuantity : 1,
-  //   mainReasonToReturn : "mainreason",
-  //   secondaryReasonToReturn : "secondreason",
-  //   otherReasonToReturn: "other Reason"
-
-  // }
-  async function createReturnSavers(newReturnProduct){
-    
-        fetch('/api/returnSavers', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newReturnProduct)
-        })
-  }
-
   return (
     <div className="App">
-      {/* {
-        selectedProductReturnId?
-        <div>
-          <button onClick={()=> setSelectedProductReturnId(undefined)}>Go Back</button>
-          <ReturnSaversDetail productReturnId={selectedProductReturnId} />
-        </div>
-        :
-        <ReturnSaversList setSelectedProductReturnId={setSelectedProductReturnId} />
-      } */}
-
-      {
-        !selectedProductReturnId && 
-        <div>
-          <RegisterForm />
-          <ReturnSaversList setSelectedProductReturnId={setSelectedProductReturnId} />
-          <ReturnSaversEditForm onSave={createReturnSavers}/>
-        </div>
-      }
-      {
-        selectedProductReturnId && 
-        <div>
-          <button onClick={() => setSelectedProductReturnId(undefined)}>Go Back</button>
-          <ReturnSaversDetail productReturnId={selectedProductReturnId} />
-        </div>
-      }
-      
+    <nav>
+    <ul>
+      <li>
+        <Link to="/" >Home</Link>
+      </li>
+      <li>
+        <Link to="/new">New</Link>
+      </li>
+    </ul>
+    </nav>
+    <Routes>
+      <Route path="/" element={<ReturnSaversListPage /> }/>
+      <Route path="/new" element={<CreateReturnSaversPage />}/>
+      <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
+      <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
+    </Routes>
+          
     </div>
   );
 }

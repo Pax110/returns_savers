@@ -76,3 +76,6 @@ npm install bootstrap react-bootstrap
 npm run build
 npm start
 
+### `Bootstrap` to install
+
+npm add bootstrap react-bootstrap

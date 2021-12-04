@@ -52,7 +52,7 @@ const RegisterForm =() => {
                 <input className="register-field-value" value= {password} onChange = { (e) => onInputUpdate(e, setPassword)}/>
 
                 <br/>
-                <button onClick={postData}>Register</button>
+                <button className="register-field-value" onClick={postData}>Register</button>
 
             </div>
         </div>

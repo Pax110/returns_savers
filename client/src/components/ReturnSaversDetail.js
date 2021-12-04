@@ -21,15 +21,15 @@ const ReturnSaversDetail = ({productReturnId}) => {
         <h2>Return Savers Detail</h2>
         <div className="detail-fields">
             <div className="field-title">OrderId</div>
-            <div className="field-value">{returns?.orderId}</div>
+            <div className="register-field-value">{returns?.orderId}</div>
             <div className="field-title">OrderDate</div>
-            <div className="field-value">{returns?.orderDate}</div>
+            <div className="register-field-value">{returns?.orderDate}</div>
             <div className="field-title">ProductName</div>
-            <div className="field-value">{returns?.productName}</div>
+            <div className="register-field-value">{returns?.productName}</div>
             <div className="field-title">ProductPrice</div>
-            <div className="field-value">{returns?.productPrice}</div>
+            <div className="register-field-value">{returns?.productPrice}</div>
             <div className="field-title">returnEligibility</div>
-            <div className="field-value">{returns?.returnEligibility}</div>
+            <div className="register-field-value">{returns?.returnEligibility}</div>
         </div>
         
       </div>

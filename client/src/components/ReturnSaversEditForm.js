@@ -69,29 +69,29 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
                  <label className="field-title">Main Reason To Return</label>
                  <select className="register-field-value" onChange={(event)=> onInputUpdate(event, setMainReasonToReturn)} >
                     <option>Select</option>
-                    <option className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
-                    <option className="register-field-value" value="Better price available">Better price available</option>
-                    <option className="register-field-value" value="Items arrived too late">Items arrived too late</option>
-                    <option className="register-field-value" value="Product used for a week">Product used for a week</option>
-                    <option className="register-field-value" value="Product damaged">Product damaged</option>
+                    <option selected={mainReasonToReturn==="Bought it by mistake"} className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
+                    <option selected={mainReasonToReturn==="Better price available"} className="register-field-value" value="Better price available">Better price available</option>
+                    <option selected={mainReasonToReturn==="Items arrived too late"}className="register-field-value" value="Items arrived too late">Items arrived too late</option>
+                    <option selected={mainReasonToReturn==="Product used for a week"}className="register-field-value" value="Product used for a week">Product used for a week</option>
+                    <option selected={mainReasonToReturn==="Product damaged"}className="register-field-value" value="Product damaged">Product damaged</option>
                  </select>
                  <label className="field-title">Secondary Reason To Return</label>
                  <select className="register-field-value" onChange={(event)=> onInputUpdate(event, setSecondaryReasonToReturn)} >
                     <option>Select</option>
-                    <option className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
-                    <option className="register-field-value" value="Better price available">Better price available</option>
-                    <option className="register-field-value" value="Items arrived too late">Items arrived too late</option>
-                    <option className="register-field-value" value="Product used for a week">Product used for a week</option>
-                    <option className="register-field-value" value="Product damaged">Product damaged</option>
+                    <option selected={secondaryReasonToReturn==="Bought it by mistake"} className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
+                    <option selected={secondaryReasonToReturn==="Better price available"} className="register-field-value" value="Better price available">Better price available</option>
+                    <option selected={secondaryReasonToReturn==="Items arrived too late"} className="register-field-value" value="Items arrived too late">Items arrived too late</option>
+                    <option selected={secondaryReasonToReturn==="Product used for a week"} className="register-field-value" value="Product used for a week">Product used for a week</option>
+                    <option selected={secondaryReasonToReturn==="Product damaged"} className="register-field-value" value="Product damaged">Product damaged</option>
                  </select>
                  <label className="field-title">Other Reason To Return</label>
                  <select className="register-field-value" onChange={(event)=> onInputUpdate(event, setOtherReasonToReturn)} >
                     <option>Select</option>
-                    <option className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
-                    <option className="register-field-value" value="Better price available">Better price available</option>
-                    <option className="register-field-value" value="Items arrived too late">Items arrived too late</option>
-                    <option className="register-field-value" value="Product used for a week">Product used for a week</option>
-                    <option className="register-field-value" value="Product damaged">Product damaged</option>
+                    <option selected={otherReasonToReturn==="Bought it by mistake"} className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
+                    <option selected={otherReasonToReturn==="Better price available"} className="register-field-value" value="Better price available">Better price available</option>
+                    <option selected={otherReasonToReturn==="Items arrived too late"} className="register-field-value" value="Items arrived too late">Items arrived too late</option>
+                    <option selected={otherReasonToReturn==="Product used for a week"} className="register-field-value" value="Product used for a week">Product used for a week</option>
+                    <option selected={otherReasonToReturn==="Product damaged"} className="register-field-value" value="Product damaged">Product damaged</option>
                  </select>
                 {/*<input value={reasonToReturn} onChange={(event) => onInputUpdate(event, setReasonToReturn) } /> */}
                 {/* <label className="field-title">Return Eligibility</label>

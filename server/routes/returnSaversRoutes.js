@@ -32,6 +32,7 @@ router.post('/returnSavers', async (req, res) => {
         let status = logicReturn.returnLogic(accessAnswerOne,accessAnswerTwo,accessAnswerThree)
         newReturnProduct.returnEligibility = status
         console.log(status)
+        
         createdId = await returnSaversModel.createReturnSavers(newReturnProduct)
     } catch (error) {
        console.log(error) 
@@ -54,5 +55,9 @@ router.post('/returnSavers/:id', async (req, res) => {
     let returnSavers = await returnSaversModel.update(id, updatedReturnProduct)
     res.send(returnSavers)
 })
+
+
+
+
 
 module.exports = router

@@ -73,9 +73,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 npm install
 npm install react-router-dom
 npm install bootstrap react-bootstrap
+npm install jspdf
+npm install reactstrap
+npm install react-icons
 npm run build
 npm start
 
 ### `Bootstrap` to install
 
 npm add bootstrap react-bootstrap
+//try npm install if doesn't work
+

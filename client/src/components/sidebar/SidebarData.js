@@ -25,7 +25,7 @@ export const SidebarData = [
     },
     {
         title: 'Profile',
-        path: '/profile',
+        path: '/register',
         icon: <FaIcons.FaEnvelopeOpenText />,
         cName: 'nav-text'
     },

@@ -2,31 +2,23 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import Navbar from './components/sidebar/Navbar'
 import './App.css';
-
 import { Button, Container, Form, Col, Row } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
-
+import './flatly_bootstrap.min.css'
 import CreateReturnSaversPage from './pages/CreateReturnSaversPage'
 import ReturnSaversDetailPage from './pages/ReturnSaversDetailPage';
 import ReturnSaversEditPage from './pages/ReturnSaversEditPage';
 import ReturnSaversListPage from './pages/ReturnSaversListPage';
-
+import PdfGenerate  from './components/pdfGenerate';
+import  RegisterPage from './pages/RegisterPage';
 function App() {
   
-  return (
-    <div className="App">
-       <Container fluid>
-    {/* <nav>
-    <ul>
-      <li>
-        <Link to="/" >Home</Link>
-      </li>
-      <li>
-        <Link to="/new">New</Link>
-      </li>
-    </ul>
-    </nav> */}
+return (
+<div className="App">
+  
+  <Container fluid>
+    
     <Navbar />
+    <br/>
     <Form>
         <Row>
           <Col>
@@ -53,9 +45,14 @@ function App() {
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
       <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
-    </Routes>
-    </Container>      
-    </div>
+
+    <Route path="/register" element={ <RegisterPage />} />
+    </Routes><br/>
+    
+    <PdfGenerate />
+  </Container> 
+       
+</div>
   );
 }
 

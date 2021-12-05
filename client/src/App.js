@@ -11,11 +11,20 @@ import ReturnSaversDetailPage from './pages/ReturnSaversDetailPage';
 import ReturnSaversEditPage from './pages/ReturnSaversEditPage';
 import ReturnSaversListPage from './pages/ReturnSaversListPage';
 
+
 function App() {
   
   return (
     <div className="App">
        <Container fluid>
+      
+        backgroundImage: "./capture-Landscape",
+        backgroundSize: "contain",
+        backgroundPositionY: "70%",
+        backgroundPositionX: "center",
+        height: "100vh",
+        backgroundRepeat: "no-repeat"
+      
     {/* <nav>
     <ul>
       <li>

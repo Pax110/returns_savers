@@ -55,6 +55,8 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, return
   
         </tbody>
       </table>
+      <br/>
+      <p>Click on an item to view more details or edit</p>
       </div>
     )
   }

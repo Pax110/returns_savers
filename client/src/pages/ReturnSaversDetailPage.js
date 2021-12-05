@@ -7,6 +7,8 @@ const ReturnSaversDetailPage = () => {
     <div>
       <ReturnSaversDetail productReturnId={params.id} />
       <Link to="edit">Edit</Link>
+      <br/>
+      <p>Select Edit button to make changes</p>
     </div>
   )
 }

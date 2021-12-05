@@ -31,6 +31,7 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="field-title">returnEligibility</div>
             <div className="register-field-value">{returns?.returnEligibility}</div>
         </div>
+        <br/>
         
       </div>
     )

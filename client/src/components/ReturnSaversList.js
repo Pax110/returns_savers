@@ -1,4 +1,5 @@
 import {useState, useEffect } from 'react'
+import { Table, Container } from 'react-bootstrap'
 
 const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, returnEligibility, onProductReturnSelected }) => (
     <tr onClick={() => onProductReturnSelected()}>
@@ -25,7 +26,8 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, return
     return(
       <div>
       <h2>Return Savers List</h2>
-      <table style={{ margin: "auto" }}>
+      <Container fluid="sm">
+      <Table striped bordered hover size="sm" responsive="sm"> {/* style={{ margin: "auto" }} */}
         <thead>
           <tr>
             <th>OrderId</th> 
@@ -56,7 +58,8 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, return
             }
   
         </tbody>
-      </table>
+      </Table>
+      </Container>
       </div>
     )
   }

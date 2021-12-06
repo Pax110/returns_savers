@@ -7,6 +7,7 @@ Features to add:
 
 2)***** Landing Page. Header - USER - Sign up and sign in
                     ADMIN - Diffrent dashboard
+                            -Separate page to show product content ex. Page 1<2<3
                     Retailer- Analytic dashboard 
                         -> PENDING eection can be changed manually
                         -> Customize questions for retailers
@@ -17,3 +18,18 @@ Features to add:
 
 5)** Background Picture 
 
+
+Corrections: 
+
+1)  Date picker 
+        ref- Material-ui
+
+2)  autofiller 
+        ref- Material-ui
+
+3)  Approve apr and true 
+
+4)  Shipping Label
+
+5)  Clean up 
+        -Titles match to the page

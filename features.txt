@@ -1,6 +1,6 @@
 Features to add:
 
-1)****  Edit Page add field ? Sold by ..ex.adidas.ca
+1)****  Edit Page add field ? Sold by ..ex.adidas.ca - done
                     -> Was product used?
                     -> Additional Comments
                     -> Questions to array  

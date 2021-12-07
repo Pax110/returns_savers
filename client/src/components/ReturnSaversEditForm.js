@@ -72,7 +72,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
                     <option selected={mainReasonToReturn==="Bought it by mistake"} className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
                     <option selected={mainReasonToReturn==="Better price available"} className="register-field-value" value="Better price available">Better price available</option>
                     <option selected={mainReasonToReturn==="Items arrived too late"} className="register-field-value" value="Items arrived too late">Items arrived too late</option>
-                    <option selected={mainReasonToReturn==="Did you use the product"} className="register-field-value" value="Did you use the product">Product used for a week</option>
+                    <option selected={mainReasonToReturn==="Did you use the product"} className="register-field-value" value="Did you use the product">Did you use the product</option>
                     <option selected={mainReasonToReturn==="Product damaged"} className="register-field-value" value="Product damaged">Product damaged</option>
                  </select>
                  <label className="field-title">Secondary Reason To Return</label>
@@ -81,7 +81,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
                     <option selected={secondaryReasonToReturn==="Bought it by mistake"} className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
                     <option selected={secondaryReasonToReturn==="Better price available"} className="register-field-value" value="Better price available">Better price available</option>
                     <option selected={secondaryReasonToReturn==="Items arrived too late"} className="register-field-value" value="Items arrived too late">Items arrived too late</option>
-                    <option selected={secondaryReasonToReturn==="Did you use the product"} className="register-field-value" value="Did you use the product">Product used for a week</option>
+                    <option selected={secondaryReasonToReturn==="Did you use the product"} className="register-field-value" value="Did you use the product">Did you use the product</option>
                     <option selected={secondaryReasonToReturn==="Product damaged"} className="register-field-value" value="Product damaged">Product damaged</option>
                  </select>
                  <label className="field-title">Other Reason To Return</label>
@@ -90,7 +90,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
                     <option selected={otherReasonToReturn==="Bought it by mistake"} className="register-field-value" value="Bought it by mistake">Bought it by mistake</option>
                     <option selected={otherReasonToReturn==="Better price available"} className="register-field-value" value="Better price available">Better price available</option>
                     <option selected={otherReasonToReturn==="Items arrived too late"} className="register-field-value" value="Items arrived too late">Items arrived too late</option>
-                    <option selected={otherReasonToReturn==="Did you use the product"} className="register-field-value" value="Did you use the product">Product used for a week</option>
+                    <option selected={otherReasonToReturn==="Did you use the product"} className="register-field-value" value="Did you use the product">Did you use the product</option>
                     <option selected={otherReasonToReturn==="Product damaged"} className="register-field-value" value="Product damaged">Product damaged</option>
                  </select>
                 {/*<input value={reasonToReturn} onChange={(event) => onInputUpdate(event, setReasonToReturn) } /> */}

@@ -16,7 +16,7 @@ const pdf = () => {
   doc.text(66,160,'Receiver:')
   doc.text(66,180,'Name: Harry')
   doc.text(66,200,'Adress: 789 street 8th ave Calgary, AB T1T 1T1')
-  doc.save()
+  doc.save('Shipping Label')
 
 }
 

@@ -1,0 +1,13 @@
+Questions: 
+
+1) Does it clarify the idea behind the app?
+
+2) Any changes/suggestions on current prosject?
+
+3) USER login and pass (Authnetication) 
+
+4) Admin access 
+
+5) Pop-up message ex. Success or Error
+                    -Login = Welcome back, userName
+

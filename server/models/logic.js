@@ -11,11 +11,11 @@ const returnSaversLogic = require('./returnSavers')
 // let answerThree = 'Items arrived too late'
 
 
-function returnLogic (answerOne,answerTwo,answerThree) {
+function returnLogic (answerOne, answerTwo, answerThree) {
     let status = null
 
     if(answerOne ===  'Bought it by mistake' && answerTwo==='Items arrived too late' && answerThree ==='Better price available' ){
-        status = 'Appr'
+        status = 'Approved'
     }
     else if(answerOne !=  'Bought it by mistake' || answerTwo !='Items arrived too late' || answerThree !='Better price available'){
          status = "Declined"
@@ -26,4 +26,4 @@ function returnLogic (answerOne,answerTwo,answerThree) {
 
 
 
-module.exports ={ returnLogic}
+module.exports = { returnLogic }

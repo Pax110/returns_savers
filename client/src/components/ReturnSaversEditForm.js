@@ -10,6 +10,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
     const [productSize, setProductSize] = useState('')
     const [productColor, setProductColor] = useState('')
     const [productQuantity, setProductQuantity] = useState('')
+    const [soldBy, setSoldBy] = useState('')
     const [mainReasonToReturn, setMainReasonToReturn] = useState('') 
     const [secondaryReasonToReturn, setSecondaryReasonToReturn] = useState('') 
     const [otherReasonToReturn, setOtherReasonToReturn] = useState('')    
@@ -25,6 +26,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
             setProductSize(existingValues.productSize)
             setProductColor(existingValues.productColor)
             setProductQuantity(existingValues.productQuantity)
+            setSoldBy(existingValues.soldBy)
             setMainReasonToReturn(existingValues.mainReasonToReturn)
             setSecondaryReasonToReturn(existingValues.secondaryReasonToReturn)
             setOtherReasonToReturn(existingValues.otherReasonToReturn)
@@ -38,7 +40,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
 
     async function postData() {
         let newReturnProduct = {
-            orderId, orderDate, productName, productPrice, productDescription, productSize, productColor, productQuantity, mainReasonToReturn,
+            orderId, orderDate, productName, productPrice, productDescription, productSize, productColor, productQuantity, soldBy, mainReasonToReturn,
             secondaryReasonToReturn, otherReasonToReturn
         }
         //returnEligibility
@@ -66,6 +68,8 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
                 <input className="register-field-value" value={productColor} onChange={(event) => onInputUpdate(event, setProductColor) } />
                 <label className="field-title">Product Quantity</label>
                 <input className="register-field-value" value={productQuantity} onChange={(event) => onInputUpdate(event, setProductQuantity) } />
+                <label className="field-title">Sold By</label>
+                <input className="register-field-value" value={soldBy} onChange={(event) => onInputUpdate(event, setSoldBy) } />
                  <label className="field-title">Main Reason To Return</label>
                  <select className="register-field-value" onChange={(event)=> onInputUpdate(event, setMainReasonToReturn)} >
                     <option>Select</option>

@@ -9,7 +9,6 @@ import CreateReturnSaversPage from './pages/CreateReturnSaversPage'
 import ReturnSaversDetailPage from './pages/ReturnSaversDetailPage';
 import ReturnSaversEditPage from './pages/ReturnSaversEditPage';
 import ReturnSaversListPage from './pages/ReturnSaversListPage';
-import PdfGenerate  from './components/pdfGenerate';
 import  RegisterPage from './pages/RegisterPage';
 function App() {
   
@@ -47,10 +46,8 @@ return (
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
       <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
 
-    <Route path="/register" element={ <RegisterPage />} />
+      <Route path="/register" element={ <RegisterPage />} />
     </Routes><br/>
-    
-    <PdfGenerate />
   </Container> 
        
 </div>

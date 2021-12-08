@@ -1,5 +1,6 @@
 import {useState, useEffect } from 'react'
-
+import {Link } from 'react-router-dom'
+import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
 
 
@@ -32,8 +33,16 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="register-field-value">{returns?.soldBy}</div>
             <div className="field-title">returnEligibility</div>
             <div className="register-field-value">{returns?.returnEligibility}</div>
+            
         </div>
-                
+        <Link to="edit">Edit</Link>
+        
+          {returns?.returnEligibility === 'Approved' && 
+          <PdfGenerate />
+          }
+        
+        
+ 
       </div>
     )
   }

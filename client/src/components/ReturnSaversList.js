@@ -27,7 +27,7 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, return
       <div>
       <h2>Return Savers List</h2>
       <Container fluid="sm">
-      <Table striped bordered hover size="sm" responsive="sm"> {/* style={{ margin: "auto" }} */}
+      <Table className='contents' striped bordered hover size="sm" responsive="sm"> {/* style={{ margin: "auto" }} */}
         <thead>
           <tr>
             <th>OrderId</th> 

@@ -4,12 +4,20 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 
+const styles = {
+    myContainerPadding: {
+        paddingTop: "5vh",
+        paddingBottom: "5vh",
+        paddingRight: "5vw",
+        paddingLeft: "13vw"
+    }
+}
 
 function AboutUs() {
     const [showStory, setShowStory]=useState()
   return (
     <div className="App">
-        <Container fluid>
+        <Container fluid style={styles.myContainerPadding}>
           <Form>
             <Row>
               <Col>
@@ -33,7 +41,7 @@ function AboutUs() {
                     }
                     {showStory &&
                      <>
-                     <Card.Img style={{width:"200px", margin:"auto"}}src={'./images/geetha.jpg'}/>
+                     <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/geetha.jpg'}/>
                      <Card.Body>
                          <Card.Title>
                              Geetha
@@ -50,7 +58,7 @@ function AboutUs() {
                              at InceptionU.               
                          </Card.Text>
                          <Button onClick={()=>{setShowStory(!showStory)}}>
-                            Click here for our detailed stories
+                            Click here for our Summary
                          </Button>
                      </Card.Body>
                      </>}
@@ -80,7 +88,7 @@ function AboutUs() {
                     }
                     {showStory &&
                      <>
-                     <Card.Img style={{width:"200px", margin:"auto"}}src={'./images/andrea2.jpg'}/>
+                     <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/>
                      <Card.Body>
                          <Card.Title>
                              Pax
@@ -97,7 +105,7 @@ function AboutUs() {
                              at InceptionU.                    
                          </Card.Text>
                          <Button onClick={()=>{setShowStory(!showStory)}}>
-                             Click here for our detailed stories 
+                             Click here for our Summary
                          </Button>
                      </Card.Body>
                      </>}
@@ -127,7 +135,7 @@ function AboutUs() {
                     }
                     {showStory &&
                      <>
-                     <Card.Img style={{width:"200px", margin:"auto"}}src={'./images/andrea2.jpg'}/>
+                     <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/>
                      <Card.Body>
                          <Card.Title>
                              Andrea
@@ -151,7 +159,7 @@ function AboutUs() {
                              and she is excited to bring these skills into her future endeavours.                    
                          </Card.Text>
                          <Button onClick={()=>{setShowStory(!showStory)}}>
-                             Click here for our detailed stories
+                             Click here for our Summary
                          </Button>
                      </Card.Body>
                      </>}

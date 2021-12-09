@@ -12,6 +12,7 @@ import ReturnSaversListPage from './pages/ReturnSaversListPage';
 import AboutUsPage from './pages/AboutUsPage';
 import PdfGenerate  from './components/pdfGenerate';
 import RegisterPage from './pages/RegisterPage';
+import HelpPage from './pages/HelpPage';
 import CaptureBlueBase from './CaptureBlueBase.PNG';
 
 function App() {
@@ -67,6 +68,7 @@ return (
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
       <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
       <Route path="/about" element={<AboutUsPage />}/>
+      <Route path="/help" element={<HelpPage />}/>
 
     <Route path="/register" element={ <RegisterPage />} />
     </Routes><br/>

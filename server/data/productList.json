@@ -2,7 +2,7 @@
     {
         "name" : "OralB",
         "price" : "150.00",
-        "description": "Tooth brush with battery operated",
+        "description": "Electric Tooth Brush with battery",
         "ratings" : 4.5,
         "images" : [{
             "public_id" : "products/Oral-B_nwm0kw",

@@ -30,9 +30,27 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
+        title: 'Log In',
+        path: '/login',
+        icon: <FaIcons.FaEnvelopeOpenText />,
+        cName: 'nav-text'
+    },
+    {
         title: 'Help',
         path: '/help',
         icon: <IoIcons.IoMdHelpCircle />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Header',
+        path: '/header',
+        icon: <FaIcons.FaEnvelopeOpenText />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Footer',
+        path: '/footer',
+        icon: <FaIcons.FaEnvelopeOpenText />,
         cName: 'nav-text'
     }
 ]

@@ -1,16 +1,17 @@
 Features to add:
 
 1)****  Edit Page add field ? Sold by ..ex.adidas.ca - done
-                    -> Was product used?
+                    -> Was product used? - done
                     -> Additional Comments
                     -> Questions to array  
 
 2)***** Landing Page. Header - USER - Sign up and sign in
                     ADMIN - Diffrent dashboard
-                            -Separate page to show product content ex. Page 1<2<3
+                            -Separate page to show product content ex. Page 1 > 2> 3> > (Pagination)
                     Retailer- Analytic dashboard 
-                        -> PENDING eection can be changed manually
+                        -> PENDING section can be changed manually
                         -> Customize questions for retailers
+
 3)*** Footer - Contact form- Inquiries, Privacy policy, Copyright
          - Made with love in Canada
 
@@ -27,7 +28,7 @@ Corrections:
 2)  autofiller 
         ref- Material-ui
 
-3)  Approve apr and true 
+3)  Approve apr and true - done
 
 4)  Shipping Label
 

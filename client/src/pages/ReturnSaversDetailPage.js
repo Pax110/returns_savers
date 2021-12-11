@@ -1,4 +1,4 @@
-import {useParams, Link} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import ReturnSaversDetail from '../components/ReturnSaversDetail'
 
 const ReturnSaversDetailPage = () => {
@@ -6,7 +6,8 @@ const ReturnSaversDetailPage = () => {
   return (
     <div>
       <ReturnSaversDetail productReturnId={params.id} />
-      <Link to="edit">Edit</Link>
+      
+      
     </div>
   )
 }

@@ -14,6 +14,8 @@ import PdfGenerate  from './components/pdfGenerate';
 import RegisterPage from './pages/RegisterPage';
 import HelpPage from './pages/HelpPage';
 import CaptureBlueBase from './CaptureBlueBase.PNG';
+import LogInPage from './pages/LogInPage';
+import Header from './components/Layout/Header';
 
 function App() {
   
@@ -32,37 +34,13 @@ return (
     >
   
   <Container fluid>
-    
-    <Navbar />
+  
+
+    <Header />
+    <Navbar /> 
     <br/>
-    {/* <Form>
-        <Row>
-          <Col>
-            <Form.Group controlId="formEmail">
-            <Form.Control type="email" placeholder= "Example@email.com"/>
-            <Form.Text className="text-muted"> 
-            Please enter your email address
-            </Form.Text>
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group controlId="formPassword">
-            <Form.Control type="password" placeholder="Password" />
-            <Form.Text className="text-muted"> 
-            Please enter your password
-            </Form.Text>
-            </Form.Group>
-          </Col>
-        </Row>
-            <Button variant="secondary" type="submit">Login</Button>
-      </Form> */}
-
-
-
-
-
-
     <Routes>
+     
       <Route path="/" element={<ReturnSaversListPage /> }/>
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
@@ -70,10 +48,10 @@ return (
       <Route path="/about" element={<AboutUsPage />}/>
       <Route path="/help" element={<HelpPage />}/>
 
-    <Route path="/register" element={ <RegisterPage />} />
+      <Route path="/register" element={ <RegisterPage />} />
+      <Route path="/login" element={<LogInPage />}/>
     </Routes><br/>
-    
-    <PdfGenerate />
+  
   </Container> 
        
 </div>

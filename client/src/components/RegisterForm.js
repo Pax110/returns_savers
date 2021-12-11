@@ -1,15 +1,18 @@
 import {useState} from 'react'
 import './ReturnSaversDetail.css'
 
+let citiesData = require('./cities.json')
 
 const RegisterForm =() => {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [address, setAddress] = useState('')
-    const [city, setCity] = useState('')
+    const [province, setProvince] = useState()
+    const [city, setCity] = useState()
     const [postalCode, setPostalCode] = useState('')
     const [password, setPassword] = useState('')
+    const [cities, setCities] = useState()
 
     function onInputUpdate(event, setter){
         let newValue = event.target.value
@@ -42,8 +45,31 @@ const RegisterForm =() => {
                 <label className="field-title">Address</label>
                 <input className="register-field-value" value= {address} onChange = { (e) => onInputUpdate(e, setAddress)}/>
 
+                <label className="field-title">Province</label>
+                <select  className="register-field-value" value={province} onChange={(e)=>{
+                    let province = e.target.value
+                    setCities(citiesData[province])
+                    setProvince(province)
+                }}>
+                    <option>Select Province</option>
+                    {
+                        Object.keys(citiesData).map((province)=>{
+                            return <option value={province}>{province}</option>
+                        })
+                    }
+                    
+                </select>
                 <label className="field-title">City</label>
-                <input className="register-field-value" value= {city} onChange = { (e) => onInputUpdate(e, setCity)}/>
+                <select className="register-field-value" value={city} onChange={(e) => {setCity(e.target.value)}} >
+                    <option>Select City</option>
+                    {
+                        cities && cities.map((city) => {
+                            return <option value={city}>{city}</option>
+                        })
+                    }
+                </select>
+                
+                {/* <input className="register-field-value" value= {city} onChange = { (e) => onInputUpdate(e, setCity)}/> */}
 
                 <label className="field-title">Postal Code</label>
                 <input className="register-field-value" value= {postalCode} onChange = { (e) => onInputUpdate(e, setPostalCode)}/>

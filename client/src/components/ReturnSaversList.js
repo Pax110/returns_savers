@@ -1,18 +1,19 @@
 import {useState, useEffect } from 'react'
 import { Table, Container } from 'react-bootstrap'
 
-const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, returnEligibility, onProductReturnSelected }) => (
+const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, soldBy, returnEligibility, onProductReturnSelected }) => (
     <tr onClick={() => onProductReturnSelected()}>
       <td>{orderId}</td>
       <td>{orderDate}</td>
       <td>{productName}</td>
       <td>{productPrice}</td>
+      <td>{soldBy}</td>
       <td>{returnEligibility}</td> 
     </tr>
   )    
   
   const ReturnSaversList = ({setSelectedProductReturnId}) => {
-    const [returnSavers, setReturnSavers] = useState([]) // not sure how to use initially before loading data from db
+    const [returnSavers, setReturnSavers] = useState([]) 
     useEffect(() => {
       async function fetchData() {
         console.log('Fetching return savers data!')
@@ -34,6 +35,7 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, return
             <th>OrderDate</th>          
             <th>ProductName</th>
             <th>ProductPrice</th>
+            <th>SoldBy</th>
             <th>ReturnEligibility</th>
           </tr>
         </thead>
@@ -53,6 +55,7 @@ const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, return
                     orderDate ={new Date(returnproduct.orderDate).toLocaleDateString('en-CA', {year : 'numeric', month: 'short', day: 'numeric'})}
                     productName={returnproduct.productName} 
                     productPrice={'$'+returnproduct.productPrice}  //.ToFixed(2) not worked in List
+                    soldBy={returnproduct.soldBy}
                     returnEligibility={returnproduct.returnEligibility} />
             })           
             }

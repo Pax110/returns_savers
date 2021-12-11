@@ -8,9 +8,10 @@
       "productSize" : "XL",
       "productColor" : "white",
       "productQuantity" : 1,
-      "mainReasonToReturn": "",
-      "secondaryReasonToReturn": "",
-      "otherReasonToReturn": "",
+      "soldBy" : "adidas",
+      "mainReasonToReturn": "Bought it by mistake",
+      "secondaryReasonToReturn": "Items arrived too late",
+      "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved"
     },
     {
@@ -22,7 +23,10 @@
       "productSize" : "15'",
       "productColor" : "silver",
       "productQuantity" : 1,
-      "reasonToReturn" : "Item arrived too late",
+      "soldBy" : "bestBuy",
+      "mainReasonToReturn": "Bought it by mistake",
+      "secondaryReasonToReturn": "Items arrived too late",
+      "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved"
     },
     {
@@ -34,7 +38,10 @@
       "productSize" : "L",
       "productColor" : "green",
       "productQuantity" : 1,
-      "reasonToReturn": "Damaged",
+      "soldBy" : "canadianTire",
+      "mainReasonToReturn": "Bought it by mistake",
+      "secondaryReasonToReturn": "Items arrived too late",
+      "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved"
     },{
       "orderId"  :"004",
@@ -45,7 +52,10 @@
       "productSize" : "L",
       "productColor" : "white",
       "productQuantity" : 2,
-      "reasonToReturn" : "No longer needed",
+      "soldBy" : "source",
+      "mainReasonToReturn": "Bought it by mistake",
+      "secondaryReasonToReturn": "Items arrived too late",
+      "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved"
     },
     {
@@ -57,7 +67,10 @@
       "productSize" : "XL",
       "productColor" : "Brown",
       "productQuantity" : 1,
-      "reasonToReturn" : "Wrong item was sent",
+      "soldBy" : "Tommy Hilfiger",
+      "mainReasonToReturn": "Bought it by mistake",
+      "secondaryReasonToReturn": "Items arrived too late",
+      "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved"
     }
 ]

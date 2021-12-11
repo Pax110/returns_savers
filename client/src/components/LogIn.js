@@ -8,13 +8,38 @@ const LogIn = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [loginError, setLoginError] = useState('')
 
     function onInputChange(event, setter){
         setter(event.target.value)
     }
-
-    async function userLogin(){
-        
+    
+    function tryLogin() {
+        console.log('Entering tryLogin')
+        async function userLogin(){
+            console.log('Entering userLogin')
+            const loginInfo = {
+                email : email,
+                password : password
+            }
+            let loginResult = await fetch('/auth/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(loginInfo)
+            })
+            if (loginResult.ok){
+                alert('Hello: ' +email)
+                setLoginError('')
+                navigate('/')
+            }
+            else {
+                console.log('Login failed')
+                setLoginError('Login failed')
+            }
+        }
+        userLogin()
     }
     function Register(){
         navigate('/register')
@@ -46,8 +71,9 @@ const LogIn = () => {
                             </div>  
                             <br/> 
                                            
-                            <Button className="p-2" variant="primary" type="submit" onClick={userLogin}>Login</Button>
-                        
+                            <Button className="p-2" variant="primary" type="submit" onClick={tryLogin}>Login</Button>
+                            { loginError !== '' && <div className='alert alert-danger'>{loginError}</div> }
+
                         </Form>
                         <hr/>
                         <h5>New to Return Savers?</h5>

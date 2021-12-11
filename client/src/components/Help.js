@@ -1,6 +1,7 @@
 import {Card, Button, Container, Form, Row, Col} from 'react-bootstrap';
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../flatly_bootstrap.min.css';
+
 import { useState } from 'react';
 
 

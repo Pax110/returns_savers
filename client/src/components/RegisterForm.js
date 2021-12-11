@@ -20,10 +20,10 @@ const RegisterForm =() => {
     }
 
     async function postData(){
-        let newUser = {firstName, lastName, email, address, city, postalCode, password}
+        let newUser = {firstName, lastName, email, address, city, province, postalCode, password}
         console.log('Saving user ', newUser)
 
-        await fetch('/user/newUser', {
+        await fetch('/auth/newUser', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newUser)

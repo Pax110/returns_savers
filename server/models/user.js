@@ -1,8 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require('./mongooseDb')
 
 //const User = mongoose.model('User', {
 
-const userSchema = new mongoose.Schema({
+const User = mongoose.model('User',{
     firstName : String,
     lastName : String,
     email : String,
@@ -21,16 +21,42 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const User = mongoose.model('User', userSchema)
+//const User = mongoose.model('User', userSchema)
 
 //user/
-async function createUser(userData){
+// async function createUser(userData){
+//     let newUser = new User(userData)
+//     let createdUser = await newUser.save()
+//     console.log('created with id...',createdUser.id)
+//     return createdUser.id
+// }
+
+async function createUser(userData) {
     let newUser = new User(userData)
     let createdUser = await newUser.save()
-    console.log('created with id...',createdUser.id)
     return createdUser.id
 }
 
+async function findUserByEmail(email) {
+    return User.findOne({ email })
+}
+
+
+async function findById(id) {
+    let fullUserRecord = await User.findById(id)
+    let userToReturn = {
+        id: fullUserRecord.id,
+        email: fullUserRecord.email
+    }   
+    return userToReturn
+}
+
+async function listUsers() {
+    return User.find({})
+}
 module.exports = {
-    createUser
+    createUser,
+    findUserByEmail,
+    findById,
+    listUsers
 }

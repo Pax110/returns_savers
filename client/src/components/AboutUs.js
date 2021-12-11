@@ -20,8 +20,8 @@ function AboutUs() {
         <Container fluid style={styles.myContainerPadding}>
           <Form>
             <Row>
-              <Col>
-                <Card className="mb-3" style={{color:"#000"}}>
+              <Col className='card-group'>
+                <Card className="mb-3 sm-3" style={{color:"#000"}}>
                     {!showStory &&
                     <>
                         <Card.Img src={'./images/geetha.jpg'}/>

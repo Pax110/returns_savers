@@ -31,6 +31,12 @@ export const SidebarData = [
     },
     {
         title: 'Profile',
+        path: '/profile',
+        icon: <FaIcons.FaEnvelopeOpenText />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Register',
         path: '/register',
         icon: <FaIcons.FaEnvelopeOpenText />,
         cName: 'nav-text'

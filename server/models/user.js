@@ -1,7 +1,5 @@
 const mongoose = require('./mongooseDb')
 
-//const User = mongoose.model('User', {
-
 const User = mongoose.model('User',{
     firstName : String,
     lastName : String,
@@ -10,6 +8,7 @@ const User = mongoose.model('User',{
     province: String,
     city : String,
     postalCode : String,
+    username : String,
     password : String,
     role : {
         type: String,
@@ -21,16 +20,6 @@ const User = mongoose.model('User',{
     }
 })
 
-//const User = mongoose.model('User', userSchema)
-
-//user/
-// async function createUser(userData){
-//     let newUser = new User(userData)
-//     let createdUser = await newUser.save()
-//     console.log('created with id...',createdUser.id)
-//     return createdUser.id
-// }
-
 async function createUser(useData) {
     let newUser = new User(useData)
     let createdUser = await newUser.save()
@@ -41,6 +30,9 @@ async function findUserByEmail(email) {
     return User.findOne({ email })
 }
 
+async function findUserByUsername(username) {
+    return User.findOne({ username })
+}
 
 async function findById(id) {
     let fullUserRecord = await User.findById(id)
@@ -58,5 +50,6 @@ module.exports = {
     createUser,
     findUserByEmail,
     findById,
-    listUsers
+    listUsers,
+    findUserByUsername
 }

@@ -8,13 +8,15 @@ const User = require('../models/user')
 const router = express.Router()
 
 passport.use(new LocalStrategy(
-    function(email, password, done) {
-        console.log('Passport is trying to verify a email', email)
-        User.findUserByEmail(email)
+    function(username, password, done) {
+        //console.log('Passport is trying to verify a email', email)
+        //User.findUserByEmail(email)
+        User.findUserByUsername(username)
         .then((user) => {
+            console.log(user)
             if (!user || (user.password !== password)) {
-                console.log(user.email)
-                done(null, false, {message: 'Email not found or password mismatch'})
+                //console.log(user.email)
+                done(null, false, {message: 'Username not found or password mismatch'})
                 return
             }
             done(null, user)
@@ -41,6 +43,7 @@ passport.deserializeUser(function(id, done) {
     .catch(done)
 });
 
+//Login authentication => /auth/login
 router.post('/login', passport.authenticate('local'), function(req, res) {
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
@@ -50,13 +53,20 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
   })
 
 
-// Create new user => /user/newUser
+// Create new user => /auth/newUser
 router.post('/newUser', async (req, res) => {
     let newUser = req.body
     console.log(newUser)
     let userId = await User.createUser(newUser)
     res.send(userId)
 })
+
+// List user => /auth/userList
+router.get('/userList', async (req, res) => {
+    let userList = await User.listUsers()
+    res.send(userList)
+})
+
 router.get('/loggedInUser', function(req, res) {
     res.send(req.user)
 }) 

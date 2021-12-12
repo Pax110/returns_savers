@@ -15,7 +15,8 @@
 .field-title {
     font-weight: 700;
     text-align: right;
-    margin: 0em 1em;
+    margin:5px;
+    /* margin: 0em 1em;   */
 }
 
 .field-value {
@@ -25,4 +26,5 @@
 
 .register-field-value {
     width: 20em;
+    margin: 2px;
 }

@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router'
-import {useEffect} from 'react'
+//import {useEffect} from 'react'
 import ReturnSaversList from '../components/ReturnSaversList'
 
 
 const ReturnSaversListPage = () => {  
 
     let navigate = useNavigate()
-    //Landing page to disolay while loading the application
+    //Landing page to display while loading the application
     // const isLogin = false
     // useEffect(()=>{
     //   if(!isLogin){

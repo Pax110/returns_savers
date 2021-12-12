@@ -11,7 +11,9 @@ const RegisterForm =() => {
     const [province, setProvince] = useState()
     const [city, setCity] = useState()
     const [postalCode, setPostalCode] = useState('')
+    const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    
     const [cities, setCities] = useState()
 
     function onInputUpdate(event, setter){
@@ -20,7 +22,7 @@ const RegisterForm =() => {
     }
 
     async function postData(){
-        let newUser = {firstName, lastName, email, address, city, province, postalCode, password}
+        let newUser = {firstName, lastName, email, address, city, province, postalCode, username, password}
         console.log('Saving user ', newUser)
 
         await fetch('/auth/newUser', {
@@ -74,8 +76,11 @@ const RegisterForm =() => {
                 <label className="field-title">Postal Code</label>
                 <input className="register-field-value" value= {postalCode} onChange = { (e) => onInputUpdate(e, setPostalCode)}/>
 
+                <label className="field-title">Username</label>
+                <input className="register-field-value" value= {username} onChange = { (e) => onInputUpdate(e, setUsername)}/>
+
                 <label className="field-title">Password</label>
-                <input className="register-field-value" value= {password} onChange = { (e) => onInputUpdate(e, setPassword)}/>
+                <input className="register-field-value" type="password" value= {password} onChange = { (e) => onInputUpdate(e, setPassword)}/>
 
                 <br/>
                 <button className="register-field-value" onClick={postData}>Register</button>

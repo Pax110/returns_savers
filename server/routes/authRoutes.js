@@ -3,14 +3,14 @@ const express = require('express')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
 
-const userModel = require('../models/user')
+const User = require('../models/user')
 
 const router = express.Router()
 
 passport.use(new LocalStrategy(
     function(email, password, done) {
         console.log('Passport is trying to verify a email', email)
-        userModel.findUserByEmail(email)
+        User.findUserByEmail(email)
         .then((user) => {
             if (!user || (user.password !== password)) {
                 console.log(user.email)
@@ -30,7 +30,7 @@ passport.serializeUser(function(user, done) {
   
 passport.deserializeUser(function(id, done) {
     console.log('passport is trying to recover the user from the cookie', id)
-    userModel.findById(id)
+    User.findById(id)
     .then((user) => {
         if (!user) {
             done(new Error('User not found or deleted'))
@@ -54,7 +54,7 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
 router.post('/newUser', async (req, res) => {
     let newUser = req.body
     console.log(newUser)
-    let userId = await userModel.createUser(newUser)
+    let userId = await User.createUser(newUser)
     res.send(userId)
 })
 router.get('/loggedInUser', function(req, res) {

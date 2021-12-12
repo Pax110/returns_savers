@@ -15,9 +15,9 @@ Features to add:
 3)*** Footer - Contact form- Inquiries, Privacy policy, Copyright
          - Made with love in Canada
 
-4)*** About US- separate page
+4)*** About US- separate page - done
 
-5)** Background Picture 
+5)** Background Picture - done
 
 
 Corrections: 
@@ -30,9 +30,7 @@ Corrections:
 
 3)  Approve apr and true - done
 
-4)  Shipping Label
+4)  Shipping Label - dynamic values 
 
 5)  Clean up 
         -Titles match to the page
-
-6) test

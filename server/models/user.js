@@ -31,8 +31,8 @@ const User = mongoose.model('User',{
 //     return createdUser.id
 // }
 
-async function createUser(userData) {
-    let newUser = new User(userData)
+async function createUser(useData) {
+    let newUser = new User(useData)
     let createdUser = await newUser.save()
     return createdUser.id
 }

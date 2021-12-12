@@ -48,16 +48,17 @@ function AboutUs() {
                          <Card.Title>
                              Geetha
                          </Card.Title>
-                         <Card.Text>
-                             Geetha was born in xxxxxxx and raised in xxxxx. 
-                             She moved to Canada in xxxxxxxxx. 
-                             In her youth, she was xxxxxxx.
-                             She went to school for xxxxxxxxxxx
-                             She is married with one children
-                             Her previous work experience is xxxxxxxxxxx
-                             She is in the process of pivoting her career into Tech
-                             and becoming a Full-Stack Developer currently learning
-                             at InceptionU.               
+                         <Card.Text >
+                         <p className='text-justify'>
+                             Geetha was born and brought up in India. She has done engineering in 'Electronics
+                             and Instrumentation' and started working as a software developer. After marriage,
+                             She moved to Fort McMurray in Canada. She gained customer service experience in 
+                             Tim Hortons and Papa Johns. Later again back to school in SAIT and studied 'Object 
+                             Oriented Software Developer' fast track course. Then joined in Canadian Natural Resource
+                             Limited and worked as 'Information System Analyst' for 3 years. Then she has taken 3 years
+                             maternity break. Now she is in the process of pivoting her career into various tech
+                             and becoming a Full-Stack Developer currently learning at InceptionU.                             
+                             </p>              
                          </Card.Text>
                          <Button onClick={()=>{setShowStory(!showStory)}}>
                             Click here for our Summary
@@ -95,7 +96,7 @@ function AboutUs() {
                          <Card.Title>
                              Pax
                          </Card.Title>
-                         <Card.Text>
+                         <Card.Text >
                              Pax was born in xxxxxxx and raised in xxxxx. 
                              He moved to Canada in xxxxxxxxx. 
                              In his youth, he was xxxxxxx.
@@ -142,7 +143,7 @@ function AboutUs() {
                          <Card.Title>
                              Andrea
                          </Card.Title>
-                         <Card.Text>
+                         <Card.Text className="text-justify">
                              Andrea was born and raised in Calgary Alberta.  
                              In her youth, she was competitive in the sport of Tumbling where she qualified for 
                              two World Age Group Championships and represented Canada in both Germany and NewZealand.

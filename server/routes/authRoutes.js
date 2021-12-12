@@ -8,10 +8,13 @@ const User = require('../models/user')
 const router = express.Router()
 
 passport.use(new LocalStrategy(
+    {
+        usernameField: 'email',
+        passwordField: 'password'},
     function(username, password, done) {
         //console.log('Passport is trying to verify a email', email)
         //User.findUserByEmail(email)
-        User.findUserByUsername(username)
+        User.findUserByEmail(username)
         .then((user) => {
             console.log(user)
             if (!user || (user.password !== password)) {

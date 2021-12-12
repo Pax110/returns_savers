@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const LogIn = () => {
     
     //const [email, setEmail] = useState('')
-    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loginError, setLoginError] = useState('')
     const navigate = useNavigate()
@@ -13,7 +13,7 @@ const LogIn = () => {
     function tryLogin() {
         async function postLogin() {
             const loginInfo = {
-                username: username, 
+                email: email, 
                 password: password
             }
             let loginResult = await fetch('/auth/login', {
@@ -42,10 +42,10 @@ const LogIn = () => {
     <div className='container' style={{width:"30%"}}>
         <div className="row">
             <div className="col">
-                <label className="field-title">Username</label>
+                <label className="field-title">Email Address</label>
             </div>
             <div className="col">
-                <input className="field-value" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input className="field-value" value={email} onChange={(e) => setEmail(e.target.value)}/>
             </div>
         </div>
         <div className="row mt-2">

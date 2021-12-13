@@ -31,8 +31,8 @@ const UserList = () => {
   return (
     <div>
       <h2>User List</h2>
-      <Container>
-          <Table>
+      <Container fluid="sm">
+      <Table className='contents' striped bordered hover size="sm" responsive="sm"> 
               <thead>
                   <tr>
                       <th>First Name</th>

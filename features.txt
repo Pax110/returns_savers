@@ -13,7 +13,7 @@ Features to add:
                         -> Customize questions for retailers
 
 3)*** Footer - Contact form- Inquiries, Privacy policy, Copyright
-         - Made with love in Canada
+         - Made with love in Calgary
 
 4)*** About US- separate page - done
 
@@ -24,6 +24,7 @@ Corrections:
 
 1)  Date picker 
         ref- Material-ui
+                -npm package
 
 2)  autofiller 
         ref- Material-ui

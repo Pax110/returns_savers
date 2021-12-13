@@ -5,7 +5,7 @@ import './Footer.css'
 function Footer() {
     return (
         <div>
-                <footer class="footer-container">
+        <footer class="footer-container">
         <div class="footer-container">
             <section class="footer-top padding-y-lg text-white">
                 <div class="row">

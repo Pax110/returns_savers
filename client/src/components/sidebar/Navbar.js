@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
       <>     
     <IconContext.Provider value={{color: '#fff'}}>
-    <div className="navbar">
+    <div className="navbar sticky-top">
       {/* <h1 className="navbar">Test</h1> */}
       <Link to="#" className="menu-bars"> 
         <FaIcons.FaBars onClick={showSidebar}/>

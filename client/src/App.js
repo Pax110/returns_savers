@@ -24,20 +24,20 @@ return (
       className="App"
       style={{
         backgroundImage: "url(" + CaptureBlueBase + ")",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPositionY: "70%",
         backgroundPositionX: "center",
-
-        height: "100vh",
+        
+        
         backgroundRepeat: "no-repeat",
       }}
     >
   
-  <Container fluid>
+  <Container fluid className="p-0">
   
 
-    <Header />
-    <Navbar /> 
+    {/* <Header /> */}
+    <Navbar className="position-sticky"/> 
     <br/>
     <Routes>
      
@@ -54,7 +54,7 @@ return (
     </Routes><br/>
   
   </Container> 
-  <Footer />
+  {/* <Footer /> */}
        
 </div>
   );

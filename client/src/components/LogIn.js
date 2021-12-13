@@ -24,7 +24,7 @@ const LogIn = () => {
                 body: JSON.stringify(loginInfo)
             })
             if (loginResult.ok) {
-                //alert('Hello: '+username)
+                //alert('Hello: '+email)
                 setLoginError('')
                 navigate('/')
             }

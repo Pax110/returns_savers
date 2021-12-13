@@ -16,7 +16,7 @@ import CaptureBlueBase from './CaptureBlueBase.PNG';
 import LogInPage from './pages/LogInPage';
 import Header from './components/Layout/Header';
 import UserListPage from './pages/UserListPage';
-
+import Footer from './components/Footer';
 function App() {
   
 return (
@@ -53,6 +53,7 @@ return (
     </Routes><br/>
   
   </Container> 
+  <Footer />
        
 </div>
   );

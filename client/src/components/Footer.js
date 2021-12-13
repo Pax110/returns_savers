@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+
+
 function Footer() {
     return (
         <div>
@@ -19,8 +22,8 @@ function Footer() {
                     <aside class="col-md col-6">
                         <h6 class="title">Company</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#">About us</a></li>
-                            <li> <a href="#">Career</a></li>
+                            {/* <li> <a href="#">About us</a></li> */}
+                            <li> <a href="#">Careers</a></li>
                             <li> <a href="#">Find a store</a></li>
                             <li> <a href="#">Rules and terms</a></li>
                             <li> <a href="#">Sitemap</a></li>
@@ -29,20 +32,20 @@ function Footer() {
                     <aside class="col-md col-6">
                         <h6 class="title">Help</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#">Contact us</a></li>
-                            <li> <a href="#">Money refund</a></li>
-                            <li> <a href="#">Order status</a></li>
-                            <li> <a href="#">Shipping info</a></li>
-                            <li> <a href="#">Open dispute</a></li>
+                            <li> <a href="#">Contact Us</a></li>
+                            <li> <a href="#">MoneyRrefunds</a></li>
+                            <li> <a href="#">Order Status</a></li>
+                            <li> <a href="#">Shipping Info</a></li>
+                            <li> <a href="#">Open Dispute</a></li>
                         </ul>
                     </aside>
                     <aside class="col-md col-6">
                         <h6 class="title">Account</h6>
                         <ul class="list-unstyled">
                             <li> <a href="#"> User Login </a></li>
-                            <li> <a href="#"> User register </a></li>
-                            <li> <a href="#"> Account Setting </a></li>
-                            <li> <a href="#"> My Orders </a></li>
+                            <li> <a href="#"> Register </a></li>
+                            <li> <a href="#"> Account Settings </a></li>
+                            <li> <a href="#"> My Returns </a></li>
                         </ul>
                     </aside>
                     <aside class="col-md">

@@ -41,8 +41,9 @@ return (
     <br/>
     <Routes>
      
-      <Route path="/" element={<ReturnSaversListPage /> }/>
+      <Route path="/" element={<ReturnSaversListPage /> }/> {/* ReturnSaversListPage needs to be changed to landing page here */}
       <Route path="/new" element={<CreateReturnSaversPage />}/>
+      <Route path="/returnSavers" element={<ReturnSaversListPage /> }/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
       <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
       <Route path="/about" element={<AboutUsPage />}/>

@@ -16,7 +16,9 @@ const styles = {
 }
 
 function AboutUs() {
-    const [showStory, setShowStory]=useState()
+    const [showStory1, setShowStory1]=useState()
+    const [showStory2, setShowStory2]=useState()
+    const [showStory3, setShowStory3]=useState()
   return (
     <div className="App">
         <Container fluid style={styles.myContainerPadding}>
@@ -24,7 +26,7 @@ function AboutUs() {
             <Row>
               <Col className='card-group'>
                 <Card className="mb-3 sm-3" style={{color:"#000"}}>
-                    {!showStory &&
+                    {!showStory1 &&
                     <>
                         <Card.Img src={'./images/geetha.jpg'}/>
                         <Card.Body>
@@ -35,13 +37,13 @@ function AboutUs() {
                                 InceptionU Cohort 7 learner <br/>
                                 Future Full Stack Developer
                             </Card.Text>
-                            <Button onClick={()=>{setShowStory(!showStory)}}>
+                            <Button onClick={()=>{setShowStory1(!showStory1)}}>
                                 Click here for our detailed stories
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showStory &&
+                    {showStory1 &&
                      <>
                      <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/geetha.jpg'}/>
                      <Card.Body>
@@ -60,7 +62,7 @@ function AboutUs() {
                              and becoming a Full-Stack Developer currently learning at InceptionU.                             
                              </p>              
                          </Card.Text>
-                         <Button onClick={()=>{setShowStory(!showStory)}}>
+                         <Button onClick={()=>{setShowStory1(!showStory1)}}>
                             Click here for our Summary
                          </Button>
                      </Card.Body>
@@ -72,7 +74,7 @@ function AboutUs() {
 
 
               <Card className="mb-3" style={{color:"#000"}}>
-                    {!showStory &&
+                    {!showStory2 &&
                     <>
                         <Card.Img src={'./images/pax.jpg'}/>
                         <Card.Body>
@@ -83,13 +85,13 @@ function AboutUs() {
                                 InceptionU Cohort 7 learner <br/>
                                 Future Full Stack Developer
                             </Card.Text>
-                            <Button onClick={()=>{setShowStory(!showStory)}}>
+                            <Button onClick={()=>{setShowStory2(!showStory2)}}>
                                 Click here for our detailed stories
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showStory &&
+                    {showStory2 &&
                      <>
                      <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/pax.jpg'}/>
                      <Card.Body>
@@ -107,7 +109,7 @@ function AboutUs() {
                              and becoming a Full-Stack Developer currently learning
                              at InceptionU.                    
                          </Card.Text>
-                         <Button onClick={()=>{setShowStory(!showStory)}}>
+                         <Button onClick={()=>{setShowStory2(!showStory2)}}>
                              Click here for our Summary
                          </Button>
                      </Card.Body>
@@ -119,7 +121,7 @@ function AboutUs() {
               </Col>
               <Col>
               <Card className="mb-3" style={{color:"#000"}}>
-                    {!showStory &&
+                    {!showStory3 &&
                     <>
                         <Card.Img src={'./images/andrea2.jpg'}/>
                         <Card.Body>
@@ -130,13 +132,13 @@ function AboutUs() {
                                 InceptionU Cohort 7 learner <br/>
                                 Future Full Stack Developer
                             </Card.Text>
-                            <Button onClick={()=>{setShowStory(!showStory)}}>
+                            <Button onClick={()=>{setShowStory3(!showStory3)}}>
                                 Click here for our detailed stories
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showStory &&
+                    {showStory3 &&
                      <>
                      <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/>
                      <Card.Body>
@@ -161,7 +163,7 @@ function AboutUs() {
                              at InceptionU.  Her career pivot has been an adventure
                              and she is excited to bring these skills into her future endeavours.                    
                          </Card.Text>
-                         <Button onClick={()=>{setShowStory(!showStory)}}>
+                         <Button onClick={()=>{setShowStory3(!showStory3)}}>
                              Click here for our Summary
                          </Button>
                      </Card.Body>

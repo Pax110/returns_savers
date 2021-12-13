@@ -1,0 +1,14 @@
+
+.footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4c5cb3;
+    padding: 15px;
+}
+.retunSavers-listStyle {
+    color:black
+
+}
+

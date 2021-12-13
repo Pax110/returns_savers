@@ -14,8 +14,13 @@ const styles = {
     }
 }
 
+
+
 function Help() {
-    const [showHelp, setShowHelp]=useState()
+    const [showHelp1, setShowHelp1]=useState()
+    const [showHelp2, setShowHelp2]=useState()
+    const [showHelp3, setShowHelp3]=useState()
+    const [showHelp4, setShowHelp4]=useState()
   return (
     <div className="App">
         <Container fluid style={styles.myContainerPadding}>
@@ -23,7 +28,7 @@ function Help() {
             <Row>
               <Col>
                 <Card className="mb-3" style={{color:"#000"}}>
-                    {!showHelp &&
+                    {!showHelp1 &&
                     <>
                         {/* <Card.Img src={'./images/geetha.jpg'}/> */}
                         <Card.Body>
@@ -33,13 +38,13 @@ function Help() {
                             <Card.Text>
                                 How will I know who to send my product to?
                             </Card.Text>
-                            <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                            <Button onClick={()=>{setShowHelp1(!showHelp1)}}>
                                 FAQ Answer
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showHelp &&
+                    {showHelp1 &&
                      <>
                      {/* <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/geetha.jpg'}/> */}
                      <Card.Body>
@@ -51,7 +56,7 @@ function Help() {
                             for you to download your shipping label.  Print this off
                             and send.               
                          </Card.Text>
-                         <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                         <Button onClick={()=>{setShowHelp1(!showHelp1)}}>
                             Back
                          </Button>
                      </Card.Body>
@@ -62,7 +67,7 @@ function Help() {
 
               <Col>
               <Card className="mb-3" style={{color:"#000"}}>
-                    {!showHelp &&
+                    {!showHelp2 &&
                     <>
                         {/* <Card.Img src={'./images/andrea2.jpg'}/> */}
                         <Card.Body>
@@ -72,13 +77,13 @@ function Help() {
                             <Card.Text>
                                 What do I do if my return is Declined?
                             </Card.Text>
-                            <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                            <Button onClick={()=>{setShowHelp2(!showHelp2)}}>
                                 FAQ Answer
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showHelp &&
+                    {showHelp2 &&
                      <>
                      {/* <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/> */}
                      <Card.Body>
@@ -91,7 +96,7 @@ function Help() {
                              You could keep it, give or sell to friends or family, or you may donate
                              it to a charity in your area.                   
                          </Card.Text>
-                         <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                         <Button onClick={()=>{setShowHelp2(!showHelp2)}}>
                              Back
                          </Button>
                      </Card.Body>
@@ -103,7 +108,7 @@ function Help() {
 
               <Col>
               <Card className="mb-3" style={{color:"#000"}}>
-                    {!showHelp &&
+                    {!showHelp3 &&
                     <>
                         {/* <Card.Img src={'./images/andrea2.jpg'}/> */}
                         <Card.Body>
@@ -113,13 +118,13 @@ function Help() {
                             <Card.Text>
                                 What if I changed my mind and now want to keep the product?
                             </Card.Text>
-                            <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                            <Button onClick={()=>{setShowHelp3(!showHelp3)}}>
                                 FAQ Answer
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showHelp &&
+                    {showHelp3 &&
                      <>
                      {/* <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/> */}
                      <Card.Body>
@@ -134,7 +139,7 @@ function Help() {
                              change your selection to "I am happy with my product"
                                                 
                          </Card.Text>
-                         <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                         <Button onClick={()=>{setShowHelp3(!showHelp3)}}>
                              Back
                          </Button>
                      </Card.Body>
@@ -146,7 +151,7 @@ function Help() {
 
               <Col>
               <Card className="mb-3" style={{color:"#000"}}>
-                    {!showHelp &&
+                    {!showHelp4 &&
                     <>
                         {/* <Card.Img src={'./images/andrea2.jpg'}/> */}
                         <Card.Body>
@@ -156,13 +161,13 @@ function Help() {
                             <Card.Text>
                                 I have a different question not listed here
                             </Card.Text>
-                            <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                            <Button onClick={()=>{setShowHelp4(!showHelp4)}}>
                                 FAQ Answer
                             </Button>
                         </Card.Body>
                         </>
                     }
-                    {showHelp &&
+                    {showHelp4 &&
                      <>
                      {/* <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/> */}
                      <Card.Body>
@@ -174,7 +179,7 @@ function Help() {
                              you may send an email to <br/>
                              info@returnsavers.com                   
                          </Card.Text>
-                         <Button onClick={()=>{setShowHelp(!showHelp)}}>
+                         <Button onClick={()=>{setShowHelp4(!showHelp4)}}>
                              Back
                          </Button>
                      </Card.Body>

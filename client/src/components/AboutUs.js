@@ -74,7 +74,7 @@ function AboutUs() {
               <Card className="mb-3" style={{color:"#000"}}>
                     {!showStory &&
                     <>
-                        <Card.Img src={'./images/andrea2.jpg'}/>
+                        <Card.Img src={'./images/pax.jpg'}/>
                         <Card.Body>
                             <Card.Title>
                                 Pax
@@ -91,7 +91,7 @@ function AboutUs() {
                     }
                     {showStory &&
                      <>
-                     <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/andrea2.jpg'}/>
+                     <Card.Img style={{width:"150px", margin:"auto"}}src={'./images/pax.jpg'}/>
                      <Card.Body>
                          <Card.Title>
                              Pax

@@ -1,6 +1,7 @@
 import  {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import ReturnSaversListPage from '../pages/ReturnSaversListPage'
 
 const LogIn = () => {
     
@@ -8,6 +9,7 @@ const LogIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loginError, setLoginError] = useState('')
+    const [logout,setLogout] = useState('')
     const navigate = useNavigate()
     
     function tryLogin() {
@@ -26,7 +28,8 @@ const LogIn = () => {
             if (loginResult.ok) {
                 //alert('Hello: '+email)
                 setLoginError('')
-                navigate('/')
+                navigate('/') 
+                // ReturnSaversListPage 
             }
             else {
                 setLoginError('Login failed!')
@@ -37,7 +40,15 @@ const LogIn = () => {
     function Register(){
         navigate('/register')
     }
-
+    function tryLogout () {
+        async function logout(){
+            let logout = await fetch('/auth/logout')
+            console.log("inside trylogout",logout)
+            
+        }
+        console.log("logging out")
+        logout()
+    }
   return (
     <div className='container' style={{width:"30%"}}>
         <div className="row">
@@ -60,7 +71,7 @@ const LogIn = () => {
         <hr/>
         <h5>New to Return Savers?</h5>
         <Button className="p-2" variant="primary" type="submit" onClick={Register}>Create an Account</Button>
-
+        <Button className="p-2" onClick={tryLogout}>Logout</Button>
         { loginError !== '' && <div className='alert alert-danger'>{loginError}</div> }
     </div>
 

@@ -30,6 +30,7 @@ return (
         
         
         backgroundRepeat: "no-repeat",
+        
       }}
     >
   
@@ -54,7 +55,7 @@ return (
     </Routes><br/>
   
   </Container> 
-  {/* <Footer /> */}
+  <Footer />
        
 </div>
   );

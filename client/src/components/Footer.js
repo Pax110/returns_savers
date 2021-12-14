@@ -59,7 +59,7 @@ function Footer() {
                 </div> 
             </section>  
     
-            <section class="footer-bottom text-center">       
+            <section class="returnSavers-footer-bottom">       
                     <p class="text-muted"> &copy; 2021 ReturnSavers, All rights reserved </p>
                   
             </section>

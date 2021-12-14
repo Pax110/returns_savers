@@ -54,7 +54,7 @@ return (
     </Routes><br/>
   
   </Container> 
-  {/* <Footer /> */}
+  <Footer />
        
 </div>
   );

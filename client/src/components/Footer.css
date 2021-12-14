@@ -5,11 +5,17 @@
     bottom: 0;
     width: 100%;
     background-color: #4c5cb3;
-    padding: 15px;
+    padding: 0px;
     /* height: 100px; */
 }
 .retunSavers-listStyle {
     color:black
+
+}
+.returnSavers-footer-bottom {
+    text-align: center;
+    padding-bottom: 0px;
+
 
 }
 

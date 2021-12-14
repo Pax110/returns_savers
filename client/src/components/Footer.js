@@ -7,7 +7,7 @@ function Footer() {
         <div>
         <footer class="footer-container">
         <div class="footer-container">
-            <section class="footer-top padding-y-lg text-white">
+            {/* <section class="footer-top padding-y-lg text-white">
                 <div class="row">
                     <aside class="col-md col-6">
                         <h6 class="title">Brands</h6>
@@ -30,10 +30,10 @@ function Footer() {
                         
                     </aside>
                 </div> 
-            </section>  
+            </section>   */}
     
             <section class="returnSavers-footer-bottom">       
-                    <p class="text-muted"> &copy; 2021 ReturnSavers, All rights reserved </p>
+                    <p class="text-muted">  &copy;2021 ReturnSavers, All rights reserved.   </p>
                   
             </section>
         </div>

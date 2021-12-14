@@ -39,14 +39,15 @@ return (
       className="App"
       style={{
         backgroundImage: "url(" + CaptureBlueBase + ")",
-        backgroundSize: "cover",
+        backgroundSize: "cover",    //"cover"
         backgroundPositionY: "70%",
         backgroundPositionX: "center",       
-        backgroundRepeat: "no-repeat",        
+        backgroundRepeat: "no-repeat", 
+        minHeight: 100,    
       }}
     >
   
-  <Container fluid className="p-0">
+  <Container fluid  mh-100 className="p-0">
   
      {/* <Header /> */}
     <Navbar className="position-sticky" username={user?.username}/> 

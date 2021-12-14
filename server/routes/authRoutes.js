@@ -57,7 +57,7 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
     // `req.user` contains the authenticated user.
     console.log('User login has succeeded!')
     console.log('Req.user is', req.user)
-    res.sendStatus(200)
+    res.json(req.user)
   })
 
 

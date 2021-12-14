@@ -8,33 +8,20 @@ import { SidebarData} from './SidebarData'
 import './Navbar.css'
 import { IconContext} from 'react-icons'
 
-const Navbar = () => {
+const Navbar = ({username}) => {
     const [sidebar, setSidebar] = useState(false)
-    const [userName, setUserName] = useState('')
+    
     const showSidebar = () => setSidebar(!sidebar)
     const isLogin = true
-    useEffect(()=>{
-      const getUser = async () => {
-        if(isLogin){
-          console.log('Login successful in navbar')
-          let userName = await fetch('/auth/loggedInUser')
-          //let userName1 = await userName.json()
-          console.log(userName)
-          //setUserName(userName)
-        }
-      }
-      getUser()
-    },[])
-
+   
   return (
       <>     
     <IconContext.Provider value={{color: '#fff'}}>
     <div className="navbar sticky-top">
-      {/* <h1 className="navbar">Test</h1> */}
       <Link to="#" className="menu-bars"> 
         <FaIcons.FaBars onClick={showSidebar}/>
       </Link>
-      {/* <label> Hello {userName}</label> */}
+       <label>{username && ' Hello ' + username }</label> 
     </div>
     
    

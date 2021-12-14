@@ -2,15 +2,15 @@ import  {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import ReturnSaversListPage from '../pages/ReturnSaversListPage'
+import UserListPage from '../pages/UserListPage'
 
-const LogIn = ({setIsLogin}) => {
+const LogIn = ({setUser}) => {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loginError, setLoginError] = useState('')
     const [logout,setLogout] = useState('')
-    //const [isLogin, setLogin] = useState(false)
-
+    
     const navigate = useNavigate()
     
     function tryLogin() {
@@ -29,13 +29,14 @@ const LogIn = ({setIsLogin}) => {
             if (loginResult.ok) {
                 //alert('Hello: '+email)
                 setLoginError('')
-                //setIsLogin(true)
+                let user = await loginResult.json()
+                setUser(user)
                 navigate('/returnSavers') 
-                // ReturnSaversListPage 
+
             }
             else {
                 setLoginError('Login failed!')
-                //setIsLogin(false)
+
             }
         }
         postLogin()
@@ -49,7 +50,7 @@ const LogIn = ({setIsLogin}) => {
         async function logout(){
             let logout = await fetch('/auth/logout')
             console.log("inside trylogout",logout)
-            
+            setUser(null)
         }
         console.log("logging out")
         logout()

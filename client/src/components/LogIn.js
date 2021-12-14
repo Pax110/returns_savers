@@ -3,13 +3,14 @@ import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import ReturnSaversListPage from '../pages/ReturnSaversListPage'
 
-const LogIn = () => {
+const LogIn = ({setIsLogin}) => {
     
-    //const [email, setEmail] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loginError, setLoginError] = useState('')
     const [logout,setLogout] = useState('')
+    //const [isLogin, setLogin] = useState(false)
+
     const navigate = useNavigate()
     
     function tryLogin() {
@@ -28,18 +29,22 @@ const LogIn = () => {
             if (loginResult.ok) {
                 //alert('Hello: '+email)
                 setLoginError('')
-                navigate('/') 
+                //setIsLogin(true)
+                navigate('/returnSavers') 
                 // ReturnSaversListPage 
             }
             else {
                 setLoginError('Login failed!')
+                //setIsLogin(false)
             }
         }
         postLogin()
     }
+
     function Register(){
         navigate('/register')
     }
+
     function tryLogout () {
         async function logout(){
             let logout = await fetch('/auth/logout')
@@ -49,6 +54,7 @@ const LogIn = () => {
         console.log("logging out")
         logout()
     }
+
   return (
     <div className='container' style={{width:"30%"}}>
         <div className="row">
@@ -75,50 +81,6 @@ const LogIn = () => {
         { loginError !== '' && <div className='alert alert-danger'>{loginError}</div> }
     </div>
 
-    // <div className="app flex-row align-items-center">
-    //  <Container >
-    //      <Row className="justify-content-center">
-    //          <Col md="9" lg="7" xl="5">
-    //              <Card className="p-2">
-    //                  <Card.Body>
-    //                      <Card.Header as="h4">Return Savers</Card.Header>
-    //                      <Card.Title className="p-2">Log In</Card.Title>
-    //                      <Form className="p-4">
-    //                          <div className="detail-fields">
-    //                              {/* <label className="field-title ">Email</label>
-    //                              <InputGroup className="mb-3">
-    //                                  <Input className="register-field-value" placeholder="Enter your Email" 
-    //                                                                          value={email}
-    //                                                                          onChange={(e)=>setEmail(e.target.value)} />
-    //                              </InputGroup> */}
-    //                              <label className="field-title ">Username</label>
-                                 
-    //                                  <input className="register-field-value" placeholder="Enter your Username" 
-    //                                                                          value={username}
-    //                                                                          onChange={(e)=>setUsername(e.target.value)} />
-                                 
-    //                              <label className="field-title">Password</label>
-                                 
-    //                                  <input className="register-field-value" placeholder="Enter your password" 
-    //                                              type="password" value={password}
-    //                                              onChange={(e)=>setPassword(e.target.value)}  />
-                                 
-    //                          </div>  
-    //                          <br/> 
-                                           
-    //                          <Button className="p-2" variant="primary" type="submit" onClick={tryLogin}>Login</Button>
-    //                          { loginError !== '' && <div className='alert alert-danger'>{loginError}</div> }
-
-    //                      </Form>
-    //                      <hr/>
-    //                      <h5>New to Return Savers?</h5>
-    //                      <Button className="p-2" variant="primary" type="submit" onClick={Register}>Create an Account</Button>
-    //                  </Card.Body>
-    //              </Card>
-    //          </Col>
-    //      </Row>
-    //      </Container>
-    //  </div> 
   )
 }
 

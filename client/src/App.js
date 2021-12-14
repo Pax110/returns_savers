@@ -14,11 +14,13 @@ import RegisterPage from './pages/RegisterPage';
 import HelpPage from './pages/HelpPage';
 import CaptureBlueBase from './CaptureBlueBase.PNG';
 import LogInPage from './pages/LogInPage';
-import Header from './components/Layout/Header';
+//import Header from './components/Layout/Header';
 import UserListPage from './pages/UserListPage';
 import Footer from './components/Footer';
+import LandingPage from './pages/LandingPage';
 function App() {
   
+
 return (
 <div
       className="App"
@@ -26,23 +28,20 @@ return (
         backgroundImage: "url(" + CaptureBlueBase + ")",
         backgroundSize: "cover",
         backgroundPositionY: "70%",
-        backgroundPositionX: "center",
-        
-        
-        backgroundRepeat: "no-repeat",
-        
+        backgroundPositionX: "center",       
+        backgroundRepeat: "no-repeat",        
       }}
     >
   
   <Container fluid className="p-0">
   
-
     {/* <Header /> */}
     <Navbar className="position-sticky"/> 
     <br/>
     <Routes>
      
-      <Route path="/" element={<ReturnSaversListPage /> }/> {/* ReturnSaversListPage needs to be changed to landing page here */}
+      <Route path="/" element={<LandingPage /> }/> {/* ReturnSaversListPage needs to be changed to landing page here */}
+      <Route path="/login" element={ <LogInPage />} />
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers" element={<ReturnSaversListPage /> }/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
@@ -51,7 +50,9 @@ return (
       <Route path="/help" element={<HelpPage />}/>
       <Route path="/profile" element={ <UserListPage />} />
       <Route path="/register" element={ <RegisterPage />} />
-      <Route path="/login" element={<LogInPage />}/>
+      
+      <Route path="/returnSaversList" element={ <ReturnSaversListPage /> } />
+       {/* <Route path="/login" element={<LogInPage />}/> */}
     </Routes><br/>
   
   </Container> 

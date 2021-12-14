@@ -33,7 +33,7 @@ function Footer() {
             </section>   */}
     
             <section class="returnSavers-footer-bottom">       
-                    <p class="text-muted">  &copy;2021 ReturnSavers, All rights reserved.   </p>
+                    <p class="text-muted">  &copy;2021 ReturnSavers, All rights reserved. Made with love in Canada  </p>
                   
             </section>
         </div>

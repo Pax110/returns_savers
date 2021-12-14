@@ -11,6 +11,8 @@ import './ReturnSaversList.css'
 //       <td>{returnEligibility}</td> 
 //     </tr>
 //   )    
+const green ={color : "green"}
+const grey = {color : "grey"}
   const ProductCardStyle = {
     margin: "10px",
     alignItems: "baseline"
@@ -32,8 +34,15 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,s
         <div className="card-body">
           <h5 className="card-title">{productName}</h5>
           <h6>$ {productPrice}</h6>
-        <div>{status}</div>
-          <p className="card-text"><small className="text-muted">Purchase Date: {orderDate}</small></p>
+                      
+            {
+              status === 'Approved' ? <div><p style={{color:"green"}}>{status}</p></div>
+               : <div ><p style={{color:"grey"}}>{status}</p></div>
+              
+            }
+
+          {/* <p className="card-text"><small className="text-muted">
+            Purchase Date: {orderDate}</small></p> */}
         </div>
       </div>
     </div>
@@ -107,18 +116,12 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,s
             }
             
             return <ProductCard key={index}
-            onProductSelected={()=>selectProduct(product)}
-            
-            
-            images={product.imageUrl}
-            
-              // {...product.images.map((img,index)=>(
-              //   <img key={index} image={img.url} />
-              // ))}
-              productName={product.productName}
-              orderDate={product.orderDate}
-              productPrice={product.productPrice}
-              status={product.returnEligibility} />
+            onProductSelected={()=>selectProduct(product)}            
+            images={product.imageUrl}           
+            productName={product.productName}
+            // orderDate={product.orderDate}
+            productPrice={product.productPrice}
+            status={product.returnEligibility} />
 
           })
         }

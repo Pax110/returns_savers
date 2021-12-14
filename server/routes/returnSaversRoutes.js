@@ -12,13 +12,13 @@ const mustBeLoggedIn = async (req, res, next) => {
     res.sendStatus(401)
 }
 
-// const mustBeAgent = async (req, res, next) => {
-//     if (req.user && req.user.isAgent) {
-//         next()
-//         return
-//     }
-//     res.sendStatus(401)
-// }
+const mustBeAdmin = async (req, res, next) => {
+    if (req.user && req.user.role === 'admin') {
+        next()
+        return
+    }
+    res.sendStatus(401)
+}
 
 // Retrieve all data
 router.get('/returnSavers', async (req, res) => {
@@ -58,7 +58,7 @@ router.post('/returnSavers', mustBeLoggedIn, async (req, res) => {
 })
 
 // update existing data by passing id
-router.post('/returnSavers/:id', async (req, res) => {
+router.post('/returnSavers/:id', mustBeAdmin, async (req, res) => {
     let id =req.params.id
     let updatedReturnProduct = req.body
     console.log('Updating return product', id, " with ", updatedReturnProduct)

@@ -5,24 +5,9 @@ import * as IoIcons  from "react-icons/io"
 
 export const SidebarData = [
     
-    {
-        title: 'Home',
-        path: '/',
-        icon: <AiIcons.AiFillHome />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Log In',
-        path: '/login',
-        icon: <FaIcons.FaEnvelopeOpenText />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Register',
-        path: '/register',
-        icon: <FaIcons.FaEnvelopeOpenText />,
-        cName: 'nav-text'
-    },
+ 
+   
+    
     {
         title: 'New Return',
         path: '/new',
@@ -35,12 +20,12 @@ export const SidebarData = [
     //     icon: <FaIcons.FaCartPlus />,
     //     cName: 'nav-text'
     // },
-    {
-        title: 'About Us',
-        path: '/about',
-        icon: <IoIcons.IoMdPeople/>,
-        cName: 'nav-text'
-    },
+    // {
+    //     title: 'About Us',
+    //     path: '/about',
+    //     icon: <IoIcons.IoMdPeople/>,
+    //     cName: 'nav-text'
+    // },
     {
         title: 'Help',
         path: '/help',
@@ -48,7 +33,7 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Admin/ All Products',
+        title: 'My Returns',
         path: '/returnSavers',
         icon: <FaIcons.FaCartPlus />,
         cName: 'nav-text'

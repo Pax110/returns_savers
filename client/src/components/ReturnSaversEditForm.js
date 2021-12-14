@@ -51,7 +51,7 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
 
     return (
          <div>
-            <h2>ReturnSavers Return Product Entry</h2>
+            <h2>New Product Return Form</h2>
             <div className="detail-fields">
                 <label className="field-title">Order Id</label>
                 <input className="register-field-value" value={orderId} onChange={(event) => onInputUpdate(event, setOrderId) } />

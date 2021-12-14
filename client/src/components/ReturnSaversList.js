@@ -11,8 +11,7 @@ import './ReturnSaversList.css'
 //       <td>{returnEligibility}</td> 
 //     </tr>
 //   )    
-const green ={color : "green"}
-const grey = {color : "grey"}
+
   const ProductCardStyle = {
     margin: "10px",
     alignItems: "baseline"

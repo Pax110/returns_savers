@@ -1,0 +1,40 @@
+5 minutus on PPT
+#PPT- Andrea 
+Slide 1) 
+    ->Team name and Team Members
+
+Slide 2) 
+    ->Problem
+
+Slide 3) 
+    ->Solution 
+
+Slide 4) 
+    ->FlowChart and our solution
+
+Slide 5) 
+    ->Technology used
+
+
+#App -How it Works & About us
+2 minutus - Geetha/Pax
+
+#App Functionality 
+5-6 minutus -Geetha/Pax
+
+section 1 -> 1) Register a new person
+             2.1) Login Fail
+             2.2) Login Successful
+             3) New product return
+                    -Decline
+                    -Approved
+Section 2 -> 1) PDF GENERATED
+             2) Edit/Update
+             3) Admin? 
+
+#Key learning 
+2 minutus 
+
+ ->Pax
+ ->Andrea
+ ->Geetha

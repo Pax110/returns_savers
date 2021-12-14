@@ -5,13 +5,43 @@ import './sidebar/Navbar.css'
 const Landing = ({username}) => {
   return (
     <div>
-  
+      
+  {/* trying Carousel */}
   <div id="navDemo" className="navbar sticky-top">
   <ul class='landingPage'>
     <ul><a class="w3-padding-large" href='/about' >About Us</a></ul>
     <ul><a class="w3-padding-large" href='/login'>Login</a></ul>   
   </ul>
 </div>
+<div className='container'>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="" alt="First slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src=""/>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src=""alt="Third slide"/>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
 <section className='container'>     
 <div class="w3-container w3-content w3-center w3-padding-hor-64" >
     <h2 class="w3-wide">How it works</h2>

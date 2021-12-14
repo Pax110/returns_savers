@@ -1,15 +1,13 @@
 import  {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import ReturnSaversListPage from '../pages/ReturnSaversListPage'
-import UserListPage from '../pages/UserListPage'
 
 const LogIn = ({setUser}) => {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loginError, setLoginError] = useState('')
-    const [logout,setLogout] = useState('')
+    //const [logout,setLogout] = useState('')
     
     const navigate = useNavigate()
     

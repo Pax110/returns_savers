@@ -1,5 +1,5 @@
 //rafc and enter -  Extension ES7 React/Redux/Graphic
-import React, {useState, useEffect } from 'react'
+import React, {useState} from 'react'
 import * as FaIcons  from "react-icons/fa"
 import * as AiIcons  from "react-icons/ai"
 import { Link } from 'react-router-dom'
@@ -11,8 +11,7 @@ import { IconContext} from 'react-icons'
 const Navbar = ({username}) => {
     const [sidebar, setSidebar] = useState(false)
     
-    const showSidebar = () => setSidebar(!sidebar)
-    const isLogin = true
+    const showSidebar = () => setSidebar(!sidebar)   
    
   return (
       <>     

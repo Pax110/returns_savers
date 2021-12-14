@@ -12,7 +12,8 @@
       "mainReasonToReturn": "Bought it by mistake",
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
-      "returnEligibility" : "Approved"
+      "returnEligibility" : "Approved",
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
     },
     {
       "orderId"  :"002",
@@ -27,7 +28,8 @@
       "mainReasonToReturn": "Bought it by mistake",
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
-      "returnEligibility" : "Approved"
+      "returnEligibility" : "Approved",
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
     },
     {
       "orderId"  :"003",
@@ -42,7 +44,8 @@
       "mainReasonToReturn": "Bought it by mistake",
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
-      "returnEligibility" : "Approved"
+      "returnEligibility" : "Approved",
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
     },{
       "orderId"  :"004",
       "orderDate" : "Jan 01, 2021",
@@ -56,7 +59,8 @@
       "mainReasonToReturn": "Bought it by mistake",
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
-      "returnEligibility" : "Approved"
+      "returnEligibility" : "Approved",
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
     },
     {
       "orderId"  :"005",
@@ -71,6 +75,7 @@
       "mainReasonToReturn": "Bought it by mistake",
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
-      "returnEligibility" : "Approved"
+      "returnEligibility" : "Approved",
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
     }
 ]

@@ -64,7 +64,7 @@ router.put('/:id', async(req, res) => {
 router.delete('/:id', async (req, res) => {
     console.log('id:', req.params.id)
     const product = await productModel.findById(req.params.id)
-    console.log(product)
+    //console.log(product)
 
     if(!product){
         return res.status(404).json({

@@ -15,7 +15,12 @@ const ReturnSavers = mongoose.model('ReturnSavers',
       "mainReasonToReturn": String,
       "secondaryReasonToReturn": String,
       "otherReasonToReturn": String,
-      "returnEligibility" : String
+      "returnEligibility" : String,
+      "imageUrl": 
+      {   
+          type:String,
+          default: "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+      }
 }
 )
 //

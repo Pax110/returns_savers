@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'react'
-import { Table, Container } from 'react-bootstrap'
-
+import { Container } from 'react-bootstrap'
+import './ReturnSaversList.css'
 // const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, soldBy, returnEligibility, onProductReturnSelected }) => (
 //     <tr onClick={() => onProductReturnSelected()}>
 //       <td>{orderId}</td>
@@ -12,27 +12,27 @@ import { Table, Container } from 'react-bootstrap'
 //     </tr>
 //   )    
   const ProductCardStyle = {
-    backgroundColor: "lightBlue",
-    padding: "5px",
-    margin: "auto",
+    margin: "10px",
     alignItems: "baseline"
     
   }
 
-const ProductCard = ({ productName, orderDate, productPrice, onProductSelected }) => (
-  <div onClick={()=>onProductSelected()}  >
-    
   
-  <div  className="card mb-3" style={ProductCardStyle} >
+
+const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,status,images }) => (
+  <div onClick={()=>onProductSelected()}  style={ProductCardStyle} className="card"  > 
+  <div  className="card mb-3"  >
     <div className="row g-0">
       <div className="col-md-4">
-        {/* <img src={logo} className="img-fluid rounded-start" alt="..." /> */}
+        {console.log("image url",images[0])}
+
+      <img src={images} className="img-fluid rounded-start" alt="..." />
       </div>
       <div className="col-md-8">
         <div className="card-body">
           <h5 className="card-title">{productName}</h5>
           <h6>$ {productPrice}</h6>
-
+        <div>{status}</div>
           <p className="card-text"><small className="text-muted">Purchase Date: {orderDate}</small></p>
         </div>
       </div>
@@ -41,19 +41,20 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected }
   </div>
 )
 
-
   const ReturnSaversList = ({setSelectedProductReturnId}) => {
     const [returnSavers, setReturnSavers] = useState([]) 
-    useEffect(() => {
-      async function fetchData() {
-        console.log('Fetching return savers data!')
-        let fetchResult = await fetch("/api/returnSavers")
-        let returnSaversList = await fetchResult.json()
-        console.log(returnSaversList)
-        setReturnSavers(returnSaversList)
-      }  
-      fetchData()
-    }, [])
+  useEffect(() => {
+    async function fetchData() {
+      console.log('Fetching return savers data!')
+      let fetchResult = await fetch("/api/returnSavers")
+      let returnSaversList = await fetchResult.json()
+      console.log("fetch call result",returnSaversList)
+      setReturnSavers(returnSaversList)
+    }  
+    fetchData()
+  }, [])
+  
+
     return(
       <div>
       <h2>Return Savers List</h2>
@@ -97,7 +98,7 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected }
 
 
 <Container fluid="lg">
-<div className="card-group" style={{margin: 10}} >
+<div className="card-group" >
         {
           returnSavers.map((product, index) => {
             function selectProduct(product){
@@ -107,10 +108,17 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected }
             
             return <ProductCard key={index}
             onProductSelected={()=>selectProduct(product)}
-           
+            
+            
+            images={product.imageUrl}
+            
+              // {...product.images.map((img,index)=>(
+              //   <img key={index} image={img.url} />
+              // ))}
               productName={product.productName}
               orderDate={product.orderDate}
-              productPrice={product.productPrice} />
+              productPrice={product.productPrice}
+              status={product.returnEligibility} />
 
           })
         }

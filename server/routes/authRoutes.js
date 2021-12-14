@@ -46,13 +46,18 @@ passport.deserializeUser(function(id, done) {
     .catch(done)
 });
 
+router.get('/logout', function(req, res){
+    console.log("get server logout")
+    req.logout();
+    res.redirect('/')
+  });
 //Login authentication => /auth/login
 router.post('/login', passport.authenticate('local'), function(req, res) {
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
     console.log('User login has succeeded!')
     console.log('Req.user is', req.user)
-    res.sendStatus(200)
+    res.json(req.user)
   })
 
 

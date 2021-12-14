@@ -1,5 +1,5 @@
 //rafc and enter -  Extension ES7 React/Redux/Graphic
-import React, {useState } from 'react'
+import React, {useState} from 'react'
 import * as FaIcons  from "react-icons/fa"
 import * as AiIcons  from "react-icons/ai"
 import { Link } from 'react-router-dom'
@@ -8,17 +8,19 @@ import { SidebarData} from './SidebarData'
 import './Navbar.css'
 import { IconContext} from 'react-icons'
 
-const Navbar = () => {
+const Navbar = ({username}) => {
     const [sidebar, setSidebar] = useState(false)
-    const showSidebar = () => setSidebar(!sidebar)
+    
+    const showSidebar = () => setSidebar(!sidebar)   
+   
   return (
       <>     
     <IconContext.Provider value={{color: '#fff'}}>
     <div className="navbar sticky-top">
-      {/* <h1 className="navbar">Test</h1> */}
       <Link to="#" className="menu-bars"> 
         <FaIcons.FaBars onClick={showSidebar}/>
       </Link>
+       <label>{username && ' Hello ' + username }</label> 
     </div>
     
    

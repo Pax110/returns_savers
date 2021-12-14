@@ -1,10 +1,12 @@
 import React from 'react'
 import LogIn from '../components/LogIn'
 
-const LogInPage = () => {
+const LogInPage = ({setUser}) => {
+
+  
   return (
     <div>
-      <LogIn />
+      <LogIn setUser={setUser} />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/sidebar/Navbar'
+import {useState, useEffect } from 'react'
 import './App.css';
 //import { Button, Container, Form, Col, Row } from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
@@ -14,11 +15,25 @@ import RegisterPage from './pages/RegisterPage';
 import HelpPage from './pages/HelpPage';
 import CaptureBlueBase from './CaptureBlueBase.PNG';
 import LogInPage from './pages/LogInPage';
-import Header from './components/Layout/Header';
+//import Header from './components/Layout/Header';
 import UserListPage from './pages/UserListPage';
 import Footer from './components/Footer';
+import LandingPage from './pages/LandingPage';
 function App() {
-  
+  let [ user, setUser] = useState()
+
+  useEffect(()=>{
+    const getUser = async () => {
+      
+        console.log('Login successful in navbar')
+        let user = await fetch('/auth/loggedInUser')
+        let fetchedResult = await user.json()
+        setUser(fetchedResult)      
+    }
+    getUser()
+  },[])
+
+
 return (
 <div
       className="App"
@@ -26,22 +41,20 @@ return (
         backgroundImage: "url(" + CaptureBlueBase + ")",
         backgroundSize: "cover",
         backgroundPositionY: "70%",
-        backgroundPositionX: "center",
-        
-        
-        backgroundRepeat: "no-repeat",
+        backgroundPositionX: "center",       
+        backgroundRepeat: "no-repeat",        
       }}
     >
   
   <Container fluid className="p-0">
   
-
-    {/* <Header /> */}
-    <Navbar className="position-sticky"/> 
+     {/* <Header /> */}
+    <Navbar className="position-sticky" username={user?.username}/> 
     <br/>
     <Routes>
      
-      <Route path="/" element={<ReturnSaversListPage /> }/> {/* ReturnSaversListPage needs to be changed to landing page here */}
+      <Route path="/" element={<LandingPage /> }/> 
+      <Route path="/login" element={ <LogInPage setUser={setUser}/>} />
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers" element={<ReturnSaversListPage /> }/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
@@ -50,7 +63,9 @@ return (
       <Route path="/help" element={<HelpPage />}/>
       <Route path="/profile" element={ <UserListPage />} />
       <Route path="/register" element={ <RegisterPage />} />
-      <Route path="/login" element={<LogInPage />}/>
+      
+      <Route path="/returnSaversList" element={ <ReturnSaversListPage /> } />
+      
     </Routes><br/>
   
   </Container> 

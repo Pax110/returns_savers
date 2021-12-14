@@ -13,6 +13,7 @@ const User = mongoose.model('User',{
     role : {
         type: String,
         default : 'user'
+        // use useContext
     },
     createdAt: {
         type: Date,

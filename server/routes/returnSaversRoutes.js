@@ -4,6 +4,22 @@ const router = express.Router()
 
 const returnSaversModel = require('../models/returnSavers')
 
+const mustBeLoggedIn = async (req, res, next) => {
+    if (req.user) {
+        next()
+        return
+    }
+    res.sendStatus(401)
+}
+
+// const mustBeAgent = async (req, res, next) => {
+//     if (req.user && req.user.isAgent) {
+//         next()
+//         return
+//     }
+//     res.sendStatus(401)
+// }
+
 // Retrieve all data
 router.get('/returnSavers', async (req, res) => {
     let returnSaversList = await returnSaversModel.listReturnProduct()
@@ -18,7 +34,7 @@ router.get('/returnSavers/:id', async (req, res) => {
 })
 
 // create new data
-router.post('/returnSavers', async (req, res) => {
+router.post('/returnSavers', mustBeLoggedIn, async (req, res) => {
     let newReturnProduct =  req.body
     console.log('NewReturnProduct', newReturnProduct)
     

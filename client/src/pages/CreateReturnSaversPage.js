@@ -13,7 +13,7 @@ const CreateReturnSaversPage = () => {
             },
             body: JSON.stringify(newReturnProduct)
         })
-        navigate('/')
+        navigate('/returnSavers')
   }
 
   return (

@@ -12,9 +12,6 @@ import './ReturnSaversList.css'
 //     </tr>
 //   )    
   const ProductCardStyle = {
-    
-     
-    
     margin: "10px",
     alignItems: "baseline"
     
@@ -23,9 +20,7 @@ import './ReturnSaversList.css'
   
 
 const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,status,images }) => (
-  <div onClick={()=>onProductSelected()}  style={ProductCardStyle} className="card"  >
-    
-  
+  <div onClick={()=>onProductSelected()}  style={ProductCardStyle} className="card"  > 
   <div  className="card mb-3"  >
     <div className="row g-0">
       <div className="col-md-4">
@@ -45,7 +40,6 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,s
   </div>
   </div>
 )
-
 
   const ReturnSaversList = ({setSelectedProductReturnId}) => {
     const [returnSavers, setReturnSavers] = useState([]) 

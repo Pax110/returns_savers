@@ -21,8 +21,9 @@ function AboutUs() {
     const [showStory3, setShowStory3]=useState()
   return (
     <div className="App">
+        <div className='navbar sticky-top'></div>
         <Container fluid style={styles.myContainerPadding}>
-          <Form>
+          
             <Row>
               <Col className='card-group'>
                 <Card className="mb-3 sm-3" style={{color:"#000"}}>
@@ -171,7 +172,7 @@ function AboutUs() {
                 </Card> 
               </Col>
             </Row>
-          </Form>
+          
           </Container>    
     </div>
   );

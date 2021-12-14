@@ -20,14 +20,14 @@ import UserListPage from './pages/UserListPage';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 function App() {
-  let [ user, setUser] = useState()
-
+  const [ user, setUser] = useState()
+  
   useEffect(()=>{
     const getUser = async () => {
       
         console.log('Login successful in navbar')
-        let user = await fetch('/auth/loggedInUser')
-        let fetchedResult = await user.json()
+        let user1 = await fetch('/auth/loggedInUser')
+        let fetchedResult = await user1.json()
         setUser(fetchedResult)      
     }
     getUser()
@@ -50,12 +50,15 @@ return (
   <Container fluid  mh-100 className="p-0">
   
      {/* <Header /> */}
-    <Navbar className="position-sticky" username={user?.username}/> 
-    <br/>
+     {
+       user && <Navbar className="position-sticky" username={user?.username} setUser={setUser}/> 
+     }
+    
+    
     <Routes>
      
       <Route path="/" element={<LandingPage /> }/> 
-      <Route path="/login" element={ <LogInPage setUser={setUser}/>} />
+      <Route path="/login" element={ <LogInPage setUserProps={setUser}/>} />
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers" element={<ReturnSaversListPage /> }/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />

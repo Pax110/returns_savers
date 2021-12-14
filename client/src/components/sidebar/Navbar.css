@@ -4,8 +4,18 @@
     display: flex;
     justify-content: start;
     align-items: center;
-}
 
+}
+.landingPage{
+    
+        background-color: #4c5cb3;
+       
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    
+    
+}
 .menu-bars{
     margin-left : 2rem;
     font-size: 2rem;

@@ -1,18 +1,18 @@
 import React from 'react'
+import LogInPage from '../pages/LogInPage'
+import './sidebar/Navbar.css'
 
-const Landing = () => {
+const Landing = ({username}) => {
   return (
     <div>
-      
-      <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top">
-  <ul class="w3-navbar w3-left-align w3-black">
-    <ul><a class="w3-padding-large" >About Us</a></ul>
-    <ul><a class="w3-padding-large" >Login</a></ul>
-    <ul><a class="w3-padding-large" >Contact</a></ul>
-    
+  
+  <div id="navDemo" className="navbar sticky-top">
+  <ul class='landingPage'>
+    <ul><a class="w3-padding-large" href='/about' >About Us</a></ul>
+    <ul><a class="w3-padding-large" href='/login'>Login</a></ul>   
   </ul>
 </div>
-<section className='container'>
+<section className='container'>     
 <div class="w3-container w3-content w3-center w3-padding-hor-64" >
     <h2 class="w3-wide">How it works</h2>
     <br/>

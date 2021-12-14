@@ -2,17 +2,32 @@
 import React, {useState} from 'react'
 import * as FaIcons  from "react-icons/fa"
 import * as AiIcons  from "react-icons/ai"
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import {Button} from 'react-bootstrap'
+
 //import { IoMdRadio } from 'react-icons/io'
 import { SidebarData} from './SidebarData'
 import './Navbar.css'
 import { IconContext} from 'react-icons'
 
-const Navbar = ({username}) => {
+const Navbar = ({username,setUser}) => {
+ const navigate = useNavigate()
+ 
     const [sidebar, setSidebar] = useState(false)
     
     const showSidebar = () => setSidebar(!sidebar)   
-   
+ 
+    function tryLogout () {
+        async function logout(){
+            let logout = await fetch('/auth/logout')
+            console.log("inside trylogout",logout)
+            setUser(null)
+            navigate('/')
+        }
+        console.log("logging out")
+        logout()
+    }
+    
   return (
       <>     
     <IconContext.Provider value={{color: '#fff'}}>
@@ -21,6 +36,8 @@ const Navbar = ({username}) => {
         <FaIcons.FaBars onClick={showSidebar}/>
       </Link>
        <label>{username && ' Hello ' + username }</label> 
+       {username && <Button className="p-2" onClick={tryLogout}>Logout</Button>
+}
     </div>
     
    

@@ -1,7 +1,7 @@
 import  {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-
+import './sidebar/Navbar.css'
 const LogIn = ({setUser}) => {
     
     const [email, setEmail] = useState('')
@@ -34,7 +34,7 @@ const LogIn = ({setUser}) => {
             }
             else {
                 setLoginError('Login failed!')
-
+                    
             }
         }
         postLogin()
@@ -44,25 +44,22 @@ const LogIn = ({setUser}) => {
         navigate('/register')
     }
 
-    function tryLogout () {
-        async function logout(){
-            let logout = await fetch('/auth/logout')
-            console.log("inside trylogout",logout)
-            setUser(null)
-        }
-        console.log("logging out")
-        logout()
-    }
-
+    
   return (
-    <div className='container' style={{width:"30%"}}>
+    
+    <div>
+        <div id="navDemo" className="navbar sticky-top Width 100%"></div>
+        <div className='container'>
         <br/>
         <br/>
         <br/>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div className="container"style={{width: "30%", align: "center"}}>
         <h2> Login </h2>
-        <br/>
-        <br/>
-        <br/>
         <br/>
         <div className="row">
             <div className="col">
@@ -87,6 +84,8 @@ const LogIn = ({setUser}) => {
             </div>
         </div>
         <button className="btn btn-primary mt-4" onClick={tryLogin}>Login</button>
+        </div>
+        
        <br/>
        <br/>     
         <hr/>
@@ -97,7 +96,7 @@ const LogIn = ({setUser}) => {
         <br/>
         <br/>
         <br/>
-        <Button className="p-2" onClick={tryLogout}>Logout</Button>
+        
         { loginError !== '' && <div className='alert alert-danger'>{loginError}</div> }
     <br/>
     <br/>
@@ -106,6 +105,7 @@ const LogIn = ({setUser}) => {
 
     <br/>
     <br/>
+    </div>
     </div>
 
   )

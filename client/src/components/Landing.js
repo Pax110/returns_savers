@@ -9,6 +9,7 @@ const Landing = ({username}) => {
   {/* trying Carousel */}
   <div id="navDemo" className="navbar sticky-top">
   <ul class='landingPage'>
+  <ul><button type="button" class="btn btn-info">Info</button></ul>
     <ul><a class="w3-padding-large" href='/about' >About Us</a></ul>
     <ul><a class="w3-padding-large" href='/login'>Login</a></ul>   
   </ul>

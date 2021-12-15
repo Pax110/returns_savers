@@ -73,7 +73,7 @@ return (
       <Route path="/register" element={ <RegisterPage />} />
       <Route path="/home" element={ <HomePage />} />
       <Route path="/returnSaversList" element={ <ReturnSaversListPage /> } />
-      <Route path="/userProfile" element={ <ProfilePage /> } />
+      <Route path="/userProfile" element={ <ProfilePage lastname={user?.lastName}firstname={user?.firstName}username={user?.username} email={user?.email} address={user?.address}setUser={setUser}province={user?.province}city={user?.city}postalCode={user?.postalCode}/> } />
       
     </Routes><br/>
   

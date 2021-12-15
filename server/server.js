@@ -4,7 +4,7 @@ const passport = require('passport')
 
 const returnSaverRoutes = require('./routes/returnSaversRoutes')
 const authRoutes = require('./routes/authRoutes')
-const productRoutes = require('./routes/productRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 const app = express()
 const port = 5000 
@@ -16,7 +16,7 @@ app.use(passport.session())
 
 app.use('/api',returnSaverRoutes)
 app.use('/auth', authRoutes)
-app.use('/product', productRoutes)
+app.use('/user', userRoutes)
 
 app.use('/', express.static('../client/build'))
 

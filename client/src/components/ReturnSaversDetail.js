@@ -24,7 +24,7 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="field-title">OrderId</div>
             <div className="register-field-value">{returns?.orderId}</div>
             <div className="field-title">OrderDate</div>
-            <div className="register-field-value">{returns?.orderDate}</div>
+            <div className="register-field-value">{new Date(returns?.orderDate).toLocaleDateString('en-CA', {year : 'numeric', month: 'short', day: 'numeric'})}</div>
             <div className="field-title">ProductName</div>
             <div className="register-field-value">{returns?.productName}</div>
             <div className="field-title">ProductPrice</div>

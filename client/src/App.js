@@ -20,6 +20,7 @@ import UserListPage from './pages/UserListPage';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
 
 
 function App() {
@@ -72,6 +73,7 @@ return (
       <Route path="/register" element={ <RegisterPage />} />
       <Route path="/home" element={ <HomePage />} />
       <Route path="/returnSaversList" element={ <ReturnSaversListPage /> } />
+      <Route path="/userProfile" element={ <ProfilePage /> } />
       
     </Routes><br/>
   

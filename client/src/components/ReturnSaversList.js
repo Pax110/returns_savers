@@ -20,8 +20,8 @@ import './ReturnSaversList.css'
 
   
 
-const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,status,images }) => (
-  <div onClick={()=>onProductSelected()}  style={ProductCardStyle} className="card"  > 
+const ProductCard = ({ productName, productPrice, onProductSelected,status,images }) => (
+  <div onClick={()=>onProductSelected()}  style={ProductCardStyle} className="mb-3 sm-3"  > 
   <div  className="card mb-3"  >
     <div className="row g-0">
       <div className="col-md-4">
@@ -48,6 +48,14 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,s
   </div>
   </div>
 )
+const styles = {
+  myContainerPadding: {
+      paddingTop: "5vh",
+      paddingBottom: "5vh",
+      paddingRight: "5vw",
+      paddingLeft: "13vw"
+  }
+}
 
   const ReturnSaversList = ({setSelectedProductReturnId}) => {
     const [returnSavers, setReturnSavers] = useState([]) 
@@ -105,7 +113,7 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,s
 
 
 
-<Container fluid="lg">
+<Container fluid style={styles.myContainerPadding}>
 <div className="card-group" >
         {
           returnSavers.map((product, index) => {

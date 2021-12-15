@@ -19,12 +19,7 @@ export const SidebarData = [
         icon: <FaIcons.FaCartPlus />,
         cName: 'nav-text'
     },
-    {
-        title: 'Profile',
-        path: '/profile',
-        icon: <IoIcons.IoMdPeople/>,
-        cName: 'nav-text'
-    },
+    
     // {
     //     title: 'My Returns',  //this should be for a user to view their own returns
     //     path: '/MyReturns',   //we will need to update this path in the future as this is fake for now
@@ -37,12 +32,7 @@ export const SidebarData = [
     //     icon: <IoIcons.IoMdPeople/>,
     //     cName: 'nav-text'
     // },
-    {
-        title: 'Help',
-        path: '/help',
-        icon: <IoIcons.IoMdHelpCircle />,
-        cName: 'nav-text'
-    },
+    
     {
         title: 'My Returns',
         path: '/returnSavers',
@@ -54,6 +44,18 @@ export const SidebarData = [
         path: '/profile',
         icon: <IoIcons.IoMdPeople />,
         cName: 'nav-text'
-    }
+    },
+    {
+        title: 'Profile',
+        path: '/userProfile',
+        icon: <IoIcons.IoMdPeople/>,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Help',
+        path: '/help',
+        icon: <IoIcons.IoMdHelpCircle />,
+        cName: 'nav-text'
+    },
 
 ]

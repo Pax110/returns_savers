@@ -24,7 +24,7 @@ const Navbar = ({username,setUser}) => {
             setUser(null)
             navigate('/')
         }
-        console.log("logging out")
+        
         logout()
     }
     
@@ -36,7 +36,7 @@ const Navbar = ({username,setUser}) => {
         <FaIcons.FaBars onClick={showSidebar}/>
       </Link>
        <label>{username && ' Hello ' + username }</label> 
-       {username && <Button className="p-2" onClick={tryLogout}>Logout</Button>
+       {username && <button onClick={tryLogout} type="button" class="btn btn-info">Logout</button>
 }
     </div>
     

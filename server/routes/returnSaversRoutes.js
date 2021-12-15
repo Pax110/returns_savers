@@ -5,6 +5,7 @@ const router = express.Router()
 const returnSaversModel = require('../models/returnSavers')
 
 const mustBeLoggedIn = async (req, res, next) => {
+    console.log('mustbeloggedin ', req.user)
     if (req.user) {
         next()
         return
@@ -13,6 +14,7 @@ const mustBeLoggedIn = async (req, res, next) => {
 }
 
 const mustBeAdmin = async (req, res, next) => {
+    console.log('user ', req.user)
     if (req.user && req.user.role === 'admin') {
         next()
         return
@@ -34,7 +36,7 @@ router.get('/returnSavers/:id', async (req, res) => {
 })
 
 // create new data
-router.post('/returnSavers', mustBeLoggedIn, async (req, res) => {
+router.post('/returnSavers', async (req, res) => {
     let newReturnProduct =  req.body
     console.log('NewReturnProduct', newReturnProduct)
     
@@ -58,7 +60,7 @@ router.post('/returnSavers', mustBeLoggedIn, async (req, res) => {
 })
 
 // update existing data by passing id
-router.post('/returnSavers/:id', mustBeAdmin, async (req, res) => {
+router.post('/returnSavers/:id', async (req, res) => {
     let id =req.params.id
     let updatedReturnProduct = req.body
     console.log('Updating return product', id, " with ", updatedReturnProduct)

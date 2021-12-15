@@ -29,7 +29,7 @@ const LogIn = ({setUser}) => {
                 setLoginError('')
                 let user = await loginResult.json()
                 setUser(user)
-                navigate('/returnSavers') 
+                navigate('/home') 
 
             }
             else {

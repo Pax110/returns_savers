@@ -39,7 +39,8 @@ async function findById(id) {
     let fullUserRecord = await User.findById(id)
     let userToReturn = {
         id: fullUserRecord.id,
-        email: fullUserRecord.email
+        email: fullUserRecord.email,
+        
     }   
     return userToReturn
 }

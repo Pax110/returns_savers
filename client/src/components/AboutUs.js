@@ -108,13 +108,11 @@ function AboutUs() {
                              Pax
                          </Card.Title>
                          <Card.Text >
-                             Pax was born in xxxxxxx and raised in xxxxx. 
-                             He moved to Canada in xxxxxxxxx. 
-                             In his youth, he was xxxxxxx.
-                             He went to school for xxxxxxxxxxx
-                             His previous work experience is xxxxxxxxxxx
-                             and is currently working at Visions
-                             He is in the process of pivoting her career into Tech
+                             Pax was born and brought up in India. 
+                             He moved to Canada in 2014.                         
+                             He went to school for Robotics Engineering.
+                             His previous work experience is in Automation Industry.                            
+                             He is in the process of pivoting her career into Development
                              and becoming a Full-Stack Developer currently learning
                              at InceptionU.                    
                          </Card.Text>

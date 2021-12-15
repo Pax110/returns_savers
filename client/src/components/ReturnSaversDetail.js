@@ -1,12 +1,12 @@
 import {useState, useEffect } from 'react'
-import {Link } from 'react-router-dom'
+
 import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
 
 
 const ReturnSaversDetail = ({productReturnId}) => {
 
-    const [returns, setReturns] = useState('') //useState({})
+    const [returns, setReturns] = useState('')
     useEffect(()=>{
       const fetchReturns = async () => {
           let fetchResult = await fetch('/api/returnSavers/'+productReturnId) 

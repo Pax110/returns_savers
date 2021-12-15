@@ -1,16 +1,6 @@
 import {useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import './ReturnSaversList.css'
-// const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, soldBy, returnEligibility, onProductReturnSelected }) => (
-//     <tr onClick={() => onProductReturnSelected()}>
-//       <td>{orderId}</td>
-//       <td>{orderDate}</td>
-//       <td>{productName}</td>
-//       <td>{productPrice}</td>
-//       <td>{soldBy}</td>
-//       <td>{returnEligibility}</td> 
-//     </tr>
-//   )    
 
   const ProductCardStyle = {
     margin: "10px",
@@ -74,7 +64,51 @@ const styles = {
     return(
       <div>
       <h2>Return Savers List</h2>
-      {/* <Container fluid="sm">
+     
+<Container fluid style={styles.myContainerPadding}>
+<div className="card-group" >
+        {
+          returnSavers.map((product, index) => {
+            function selectProduct(product){
+              console.log("selected product called on", product)
+              setSelectedProductReturnId(product._id)
+            }
+            
+            return <ProductCard key={index}
+            onProductSelected={()=>selectProduct(product)}            
+            images={product.imageUrl}           
+            productName={product.productName}
+            // orderDate={product.orderDate}
+            productPrice={product.productPrice}
+            status={product.returnEligibility} />
+
+          })
+        }
+
+      </div>
+      </Container>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/>
+      </div>
+    )
+  }
+
+  //
+  export default ReturnSaversList
+
+//Tabel (previously used code)
+// const ReturnSaversRow = ({ orderId, orderDate, productName, productPrice, soldBy, returnEligibility, onProductReturnSelected }) => (
+//     <tr onClick={() => onProductReturnSelected()}>
+//       <td>{orderId}</td>
+//       <td>{orderDate}</td>
+//       <td>{productName}</td>
+//       <td>{productPrice}</td>
+//       <td>{soldBy}</td>
+//       <td>{returnEligibility}</td> 
+//     </tr>
+//   )    
+
+   {/* <Container fluid="sm">
       <Table className='contents' striped bordered hover size="sm" responsive="sm"> {/* style={{ margin: "auto" }} */}
         {/* <thead>
           <tr>
@@ -110,36 +144,3 @@ const styles = {
         </tbody>
       </Table>
       </Container> */} 
-
-
-
-<Container fluid style={styles.myContainerPadding}>
-<div className="card-group" >
-        {
-          returnSavers.map((product, index) => {
-            function selectProduct(product){
-              console.log("selected product called on", product)
-              setSelectedProductReturnId(product._id)
-            }
-            
-            return <ProductCard key={index}
-            onProductSelected={()=>selectProduct(product)}            
-            images={product.imageUrl}           
-            productName={product.productName}
-            // orderDate={product.orderDate}
-            productPrice={product.productPrice}
-            status={product.returnEligibility} />
-
-          })
-        }
-
-      </div>
-      </Container>
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/>
-      </div>
-    )
-  }
-
-  //
-  export default ReturnSaversList

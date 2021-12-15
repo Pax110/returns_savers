@@ -48,15 +48,13 @@ const LogIn = ({setUser}) => {
   return (
     
     <div>
-        <div id="navDemo" className="navbar sticky-top Width 100%"></div>
+            <div id="navDemo" className="navbar sticky-top">
+    <ul class='landingPage'>
+      <ul><a type="button" class="btn btn-info" href='/' >Back</a></ul>
+      <ul><a type="button" class="btn btn-info" href='/about' >About Us</a></ul>   
+    </ul>
+  </div>
         <div className='container'>
-        <br/>
-        <br/>
-        <br/>
-        
-        <br/>
-        <br/>
-        <br/>
         <br/>
         <div className="container"style={{width: "30%", align: "center"}}>
         <h2> Login </h2>
@@ -69,15 +67,12 @@ const LogIn = ({setUser}) => {
             <div className="col">
                 <input className="field-value" value={email} onChange={(e) => setEmail(e.target.value)}/>
             <br/>
-            <br/>
-            <br/>
             </div>
         </div>
         <div className="row mt-2">
             <div className="col">
                 <label className="field-title">Password</label>
-            <br/>
-            <br/>    
+            <br/>  
             </div>
             <div className="col">
                 <input className="field-value"type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
@@ -85,16 +80,11 @@ const LogIn = ({setUser}) => {
         </div>
         <button className="btn btn-primary mt-4" onClick={tryLogin}>Login</button>
         </div>
-        
-       <br/>
        <br/>     
         <hr/>
         <h5>New to Return Savers?</h5>
         <br/>
-        <br/>
         <Button className="p-2" variant="primary" type="submit" onClick={Register}>Create an Account</Button>
-        <br/>
-        <br/>
         <br/>
         
         { loginError !== '' && <div className='alert alert-danger'>{loginError}</div> }
@@ -102,9 +92,8 @@ const LogIn = ({setUser}) => {
     <br/>
     <br/>
     <br/>
-
     <br/>
-    <br/>
+    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>
     </div>
     </div>
 

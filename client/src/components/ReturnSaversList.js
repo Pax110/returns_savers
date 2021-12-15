@@ -127,6 +127,8 @@ const ProductCard = ({ productName, orderDate, productPrice, onProductSelected,s
 
       </div>
       </Container>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/>
       </div>
     )
   }

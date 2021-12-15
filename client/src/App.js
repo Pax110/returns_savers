@@ -19,6 +19,9 @@ import LogInPage from './pages/LogInPage';
 import UserListPage from './pages/UserListPage';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
+import HomePage from './pages/HomePage';
+
+
 function App() {
   const [ user, setUser] = useState()
   
@@ -67,7 +70,7 @@ return (
       <Route path="/help" element={<HelpPage />}/>
       <Route path="/profile" element={ <UserListPage />} />
       <Route path="/register" element={ <RegisterPage />} />
-      
+      <Route path="/home" element={ <HomePage />} />
       <Route path="/returnSaversList" element={ <ReturnSaversListPage /> } />
       
     </Routes><br/>

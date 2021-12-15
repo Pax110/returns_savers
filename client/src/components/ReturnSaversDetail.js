@@ -35,12 +35,15 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="register-field-value">{returns?.returnEligibility}</div>
             
         </div>
-        <Link to="edit">Edit</Link>
+        <a type="button" class="btn btn-info">Edit</a>
+
+       
         
           {returns?.returnEligibility === 'Approved' && 
           <PdfGenerate />
           }
-        
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
         
  
       </div>

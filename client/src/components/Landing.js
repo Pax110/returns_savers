@@ -9,9 +9,8 @@ const Landing = ({username}) => {
   {/* trying Carousel */}
   <div id="navDemo" className="navbar sticky-top">
   <ul class='landingPage'>
-  <ul><button type="button" class="btn btn-info">Info</button></ul>
-    <ul><a class="w3-padding-large" href='/about' >About Us</a></ul>
-    <ul><a class="w3-padding-large" href='/login'>Login</a></ul>   
+    <ul><a type="button" class="btn btn-info" href='/about' >About Us</a></ul>
+    <ul><a type="button" class="btn btn-info" href='/login'>Login</a></ul>   
   </ul>
 </div>
 <div className='container'>
@@ -71,6 +70,17 @@ const Landing = ({username}) => {
     </div>
   </div>
 </section>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/> <br/> <br/> <br/> <br/>
+
+
+
     </div>
   )
 }

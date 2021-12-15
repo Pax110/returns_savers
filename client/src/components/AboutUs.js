@@ -6,6 +6,8 @@ import '../flatly_bootstrap.min.css';
 
 import { useState } from 'react';
 
+
+
 const styles = {
     myContainerPadding: {
         paddingTop: "5vh",
@@ -19,9 +21,15 @@ function AboutUs() {
     const [showStory1, setShowStory1]=useState()
     const [showStory2, setShowStory2]=useState()
     const [showStory3, setShowStory3]=useState()
+
   return (
-    <div className="App">
-        <div className='navbar sticky-top'></div>
+    <div>
+    <div id="navDemo" className="navbar sticky-top">
+    <ul class='landingPage'>
+      <ul><a type="button" class="btn btn-info" href='/' >Back</a></ul>
+      <ul><a type="button" class="btn btn-info" href='/login'>Login</a></ul>   
+    </ul>
+  </div>
         <Container fluid style={styles.myContainerPadding}>
           
             <Row>
@@ -174,6 +182,7 @@ function AboutUs() {
             </Row>
           
           </Container>    
+          <br/> <br/> <br/> <br/> <br/>
     </div>
   );
 }

@@ -21,7 +21,7 @@ export const SidebarData = [
     },
     {
         title: 'Profile',
-        path: '/profilePage',
+        path: '/profile',
         icon: <IoIcons.IoMdPeople/>,
         cName: 'nav-text'
     },

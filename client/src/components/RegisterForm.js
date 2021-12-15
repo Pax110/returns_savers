@@ -1,9 +1,12 @@
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import './ReturnSaversDetail.css'
 
 let citiesData = require('./cities.json')
 
 const RegisterForm =() => {
+    const navigate= useNavigate()
+
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -30,6 +33,7 @@ const RegisterForm =() => {
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newUser)
         })
+        navigate('/login')
     }
     return (
         <div>

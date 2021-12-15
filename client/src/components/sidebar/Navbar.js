@@ -2,7 +2,7 @@
 import React, {useState} from 'react'
 import * as FaIcons  from "react-icons/fa"
 import * as AiIcons  from "react-icons/ai"
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {Button} from 'react-bootstrap'
 
 //import { IoMdRadio } from 'react-icons/io'

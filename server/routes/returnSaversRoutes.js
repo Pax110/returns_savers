@@ -5,6 +5,7 @@ const router = express.Router()
 const returnSaversModel = require('../models/returnSavers')
 
 const mustBeLoggedIn = async (req, res, next) => {
+    console.log('mustbeloggedin ', req.user)
     if (req.user) {
         next()
         return
@@ -13,6 +14,7 @@ const mustBeLoggedIn = async (req, res, next) => {
 }
 
 const mustBeAdmin = async (req, res, next) => {
+    console.log('user ', req.user)
     if (req.user && req.user.role === 'admin') {
         next()
         return

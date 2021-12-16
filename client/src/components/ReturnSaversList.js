@@ -15,7 +15,7 @@ const ProductCard = ({ productName, productPrice, onProductSelected,status,image
   <div  className="card mb-3"  >
     <div className="row g-0">
       <div className="col-md-4">
-        {console.log("image url",images[0])}
+     
 
       <img src={images} className="img-fluid rounded-start" alt="..." />
       </div>
@@ -51,10 +51,10 @@ const styles = {
     const [returnSavers, setReturnSavers] = useState([]) 
   useEffect(() => {
     async function fetchData() {
-      console.log('Fetching return savers data!')
+     
       let fetchResult = await fetch("/api/returnSavers")
       let returnSaversList = await fetchResult.json()
-      console.log("fetch call result",returnSaversList)
+     
       setReturnSavers(returnSaversList)
     }  
     fetchData()
@@ -63,14 +63,14 @@ const styles = {
 
     return(
       <div>
-      <h2>Return Savers List</h2>
+      <h2>My Returns</h2>
      
 <Container fluid style={styles.myContainerPadding}>
 <div className="card-group" >
         {
           returnSavers.map((product, index) => {
             function selectProduct(product){
-              console.log("selected product called on", product)
+              
               setSelectedProductReturnId(product._id)
             }
             

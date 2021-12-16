@@ -73,7 +73,7 @@ const RegisterForm =() => {
                 <ul><a type="button" class="btn btn-info" href='/about' >About Us</a></ul>   
                 </ul>
             </div>
-            <h2>Register Form</h2>
+            <h2>Sign up!</h2>
             <div className="container" >
                 <div className="detail-fields">
                     <label className="field-title">First Name<span style={{color:'#e74c3c'}}> * </span></label>

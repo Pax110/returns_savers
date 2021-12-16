@@ -1,17 +1,19 @@
-import React from 'react'
+
 import jsPDF from 'jspdf'
 import {Button} from 'reactstrap'
 
-const pdfGenerate = () =>{
+const PdfGenerate = ({firstname, lastname, address,city,province,postalCode}) =>{
 
+
+  
 const pdf = () => {
-
+  
   var doc = new jsPDF('landscape','px','a4','false')
   
   doc.text(266,50,'Shipping Label')
   doc.text(66,80,'Sender:')
-  doc.text(66,100,'Name: John')
-  doc.text(66,120,'Adress: 123 street 1st ave Calgary, AB T1T 1T1')
+  doc.text(66,100,'Name:'+firstname+' '+lastname)
+  doc.text(66,120,'Adress:'+address+ " "+ city+ " "+ province+ " "+ postalCode)
   
   doc.text(66,160,'Receiver:')
   doc.text(66,180,'Name: Harry')
@@ -29,4 +31,4 @@ return (
       )
 
 }
-export default pdfGenerate
+export default PdfGenerate

@@ -10,4 +10,8 @@ router.get('/userModel/:id', async (req, res) => {
     res.send(userProfile)
 })
 
+
+
+
 module.exports = router
+

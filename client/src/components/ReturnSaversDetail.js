@@ -4,22 +4,43 @@ import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
 import { Link } from 'react-router-dom'
 
-const ReturnSaversDetail = ({productReturnId}) => {
+const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,province,postalCode}) => {
 
     const [returns, setReturns] = useState('')
+   
     useEffect(()=>{
       const fetchReturns = async () => {
           let fetchResult = await fetch('/api/returnSavers/'+productReturnId) 
           let fetchedReturns = await fetchResult.json()
-          console.log(fetchedReturns)
+          
           setReturns(fetchedReturns)
       }
       fetchReturns()
     },[productReturnId])
+  
+    
+    const [ user, setUser] = useState()
+  
+    useEffect(()=>{
+      const getUser = async () => {
+        
+          console.log('Login successful in navbar')
+          let user1 = await fetch('/auth/loggedInUser')
+          let fetchedResult = await user1.json()
+          setUser(fetchedResult)      
+          
+  
+        
+      }
+      getUser()
+    },[])
 
+
+    
     return(
       <div>
         <h2>Return Savers Detail</h2>
+       {console.log('same fetch call that was in App', user)}
         <div className="detail-fields">
             <div className="field-title">OrderId</div>
             <div className="register-field-value">{returns?.orderId}</div>
@@ -40,7 +61,7 @@ const ReturnSaversDetail = ({productReturnId}) => {
         
         
           {returns?.returnEligibility === 'Approved' && 
-          <PdfGenerate />
+          <PdfGenerate address={address} lastname={lastname} firstname={firstname} city={city} province={province} postalCode={postalCode}/>
           }
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/><br/><br/><br/>

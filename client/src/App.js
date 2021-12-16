@@ -33,6 +33,9 @@ function App() {
         let user1 = await fetch('/auth/loggedInUser')
         let fetchedResult = await user1.json()
         setUser(fetchedResult)      
+        
+
+      
     }
     getUser()
   },[])
@@ -53,20 +56,22 @@ return (
   
   <Container fluid  mh-100 className="p-0">
   
-     {/* <Header /> */}
+    
      {
        user && <Navbar className="position-sticky" username={user?.username} setUser={setUser}/> 
      }
-    
-    
+    {
+      console.log("user in App",user)
+    }
+   
     <Routes>
      
       <Route path="/" element={<LandingPage /> }/> 
       <Route path="/login" element={ <LogInPage setUserProps={setUser}/>} />
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers" element={<ReturnSaversListPage /> }/>
-      <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
-      <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage  editButton={user?.role}/>} />
+      <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage lastname={user?.lastName} firstname={user?.firstName} address={user?.address} city={user?.city} province={user?.province} postalCode={user?.postalCode}/>} />
+      <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
       <Route path="/about" element={<AboutUsPage />}/>
       <Route path="/help" element={<HelpPage />}/>
       <Route path="/profile" element={ <UserListPage />} />
@@ -75,7 +80,7 @@ return (
       <Route path="/returnSaversList" element={ <ReturnSaversListPage /> } />
       <Route path="/userProfile" element={ <ProfilePage lastname={user?.lastName}firstname={user?.firstName}username={user?.username} email={user?.email} address={user?.address}setUser={setUser}province={user?.province}city={user?.city}postalCode={user?.postalCode}/> } />
       
-    </Routes><br/>
+    </Routes>
   
   </Container> 
   <Footer />

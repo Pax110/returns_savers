@@ -5,7 +5,9 @@ function ProfilePage({username, firstname, lastname, email, address, province, c
   
     return (
         <div>
-            <Profile username={username} firstname={firstname} lastname={lastname} email={email} address={address} city={city} province={province} postalCode={postalCode}/>
+            <Profile username={username} firstname={firstname} 
+            lastname={lastname} email={email} address={address} city={city} 
+            province={province} postalCode={postalCode}/>
         </div>
     )
 }

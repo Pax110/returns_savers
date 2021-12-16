@@ -22,7 +22,7 @@ const ProductCard = ({ productName, productPrice, onProductSelected,status,image
       <div className="col-md-8">
         <div className="card-body">
           <h5 className="card-title">{productName}</h5>
-          <h6>$ {productPrice}</h6>
+          <h6 style={{"font-style": "italic"}}>$ {productPrice}</h6>
                       
             {
               status === 'Approved' ? <div><p style={{color:"green"}}>{status}</p></div>

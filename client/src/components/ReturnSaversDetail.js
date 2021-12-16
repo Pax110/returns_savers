@@ -2,7 +2,6 @@ import {useState, useEffect } from 'react'
 
 import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
-import ReturnSaversEditForm from '../components/ReturnSaversEditForm'
 import { Link } from 'react-router-dom'
 
 const ReturnSaversDetail = ({productReturnId}) => {
@@ -29,7 +28,7 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="field-title">ProductName</div>
             <div className="register-field-value">{returns?.productName}</div>
             <div className="field-title">ProductPrice</div>
-            <div className="register-field-value">{returns?.productPrice}</div>
+            <div className="register-field-value">${returns?.productPrice}</div>
             <div className="field-title">SoldBy</div>
             <div className="register-field-value">{returns?.soldBy}</div>
             <div className="field-title">returnEligibility</div>

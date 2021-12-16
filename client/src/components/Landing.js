@@ -1,5 +1,4 @@
 import React from 'react'
-import LogInPage from '../pages/LogInPage'
 import './sidebar/Navbar.css'
 
 const Landing = ({username}) => {

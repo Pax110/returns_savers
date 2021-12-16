@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import Profile from '../components/Profile'
+
 function ProfilePage({username, firstname, lastname, email, address, province, city, postalCode}) {
   
     return (

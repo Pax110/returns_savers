@@ -1,7 +1,5 @@
-import React from 'react'
-import {useState,useEffect} from 'react' 
+import React from 'react' 
 import './ReturnSaversDetail.css'
-
 
 function Profile({username,firstname, lastname,email, address,city,province,postalCode}) {
     return (

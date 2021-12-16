@@ -28,7 +28,8 @@ function Profile({username,firstname, lastname,email, address,city,province,post
             </div>
             
             
-            
+            <br/> <br/> <br/> <br/> <br/><br/> <br/> <br/> <br/> <br/><br/> <br/> <br/> <br/> <br/>
+            <br/> <br/> <br/> <br/> <br/><br/><br/>
         </div>
     )
 }

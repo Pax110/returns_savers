@@ -17,7 +17,7 @@ const Home = ({username}) => {
       <h2 class="w3-wide">Welcome</h2>
       <br/>
       <br/>
-      <h3 class="w3-opacity"><i>Thank you for using Return Savers</i></h3>
+      <h3 class="w3-opacity"><i>Hope you are as excited as us to be using Return Savers</i></h3>
       <br/>
       <br/>
       <h4 class="w3-justify">We are passionate about saving the environment one return at a time.  We are glad to have you on board and contributing to saving the environment</h4>

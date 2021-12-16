@@ -66,7 +66,7 @@ return (
       <Route path="/new" element={<CreateReturnSaversPage />}/>
       <Route path="/returnSavers" element={<ReturnSaversListPage /> }/>
       <Route path="/returnSavers/:id" element={ <ReturnSaversDetailPage />} />
-      <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage />} />
+      <Route path="/returnSavers/:id/edit" element={ <ReturnSaversEditPage  editButton={user?.role}/>} />
       <Route path="/about" element={<AboutUsPage />}/>
       <Route path="/help" element={<HelpPage />}/>
       <Route path="/profile" element={ <UserListPage />} />

@@ -34,7 +34,7 @@ router.get('/returnSavers/:id', async (req, res) => {
 })
 
 // create new data
-router.post('/returnSavers', mustBeLoggedIn, async (req, res) => {
+router.post('/returnSavers', async (req, res) => {
     let newReturnProduct =  req.body
     console.log('NewReturnProduct', newReturnProduct)
     
@@ -58,7 +58,7 @@ router.post('/returnSavers', mustBeLoggedIn, async (req, res) => {
 })
 
 // update existing data by passing id
-router.post('/returnSavers/:id', mustBeAdmin, async (req, res) => {
+router.post('/returnSavers/:id', async (req, res) => {
     let id =req.params.id
     let updatedReturnProduct = req.body
     console.log('Updating return product', id, " with ", updatedReturnProduct)

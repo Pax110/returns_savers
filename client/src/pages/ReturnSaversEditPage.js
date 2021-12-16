@@ -2,12 +2,12 @@ import {useNavigate, useParams } from 'react-router'
 import {useEffect, useState } from 'react'
 import ReturnSaversEditForm from '../components/ReturnSaversEditForm'
 
-const ReturnSaversEditPage = () => {
+const ReturnSaversEditPage = ({editButton}) => {
 
     let params = useParams()
     let navigate = useNavigate()
     let productReturnId = params.id
-
+    console.log("editBtton",editButton)
     const [returns, setReturns] = useState('') 
 
     useEffect(()=>{

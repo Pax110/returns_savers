@@ -2,7 +2,8 @@ import {useState, useEffect } from 'react'
 
 import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
-
+import ReturnSaversEditForm from '../components/ReturnSaversEditForm'
+import { Link } from 'react-router-dom'
 
 const ReturnSaversDetail = ({productReturnId}) => {
 
@@ -35,9 +36,9 @@ const ReturnSaversDetail = ({productReturnId}) => {
             <div className="register-field-value">{returns?.returnEligibility}</div>
             
         </div>
-        <a type="button" class="btn btn-info">Edit</a>
-
-       
+      
+        <Link type="button" to="edit">Edit</Link>
+        
         
           {returns?.returnEligibility === 'Approved' && 
           <PdfGenerate />

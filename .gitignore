@@ -23,6 +23,5 @@
 .yarn-integrity
 .next
 .env
-*.png
-*.jpg
+
 *.ttf

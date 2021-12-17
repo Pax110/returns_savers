@@ -10,7 +10,7 @@ const pdf = () => {
   
   var doc = new jsPDF('landscape','px','a4','false')
   
-  doc.text(266,50,'Shipping Label')
+  doc.text(266,50,'QR CODED: Shipping Label')
   doc.text(66,80,'Sender:')
   doc.text(66,100,'Name:'+firstname+' '+lastname)
   doc.text(66,120,'Adress:'+address+ " "+ city+ " "+ province+ " "+ postalCode)

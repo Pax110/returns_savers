@@ -1,8 +1,9 @@
 import {useState, useEffect } from 'react'
-
+import { toast } from 'react-toastify';
 import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
 import { Link } from 'react-router-dom'
+import { ToastContainer } from 'react-bootstrap';
 
 const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,province,postalCode}) => {
 
@@ -35,7 +36,15 @@ const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,
       getUser()
     },[])
 
+    
+    function toastifyF () {
+      console.log("Click")
+      toast.success("Success Notification !", {
+        position: toast.POSITION.TOP_CENTER
+      })
 
+    }
+    
     
     return(
       <div>
@@ -59,10 +68,15 @@ const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,
       
         <Link type="button" to="edit">Edit</Link>
         
+        <button onClick={toastifyF}></button>
         
           {returns?.returnEligibility === 'Approved' && 
           <PdfGenerate address={address} lastname={lastname} firstname={firstname} city={city} province={province} postalCode={postalCode}/>
+          
           }
+          
+
+          
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/><br/><br/><br/>
         

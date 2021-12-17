@@ -13,7 +13,7 @@
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved",
-      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1639753753/products/Default_d0lenx.jpg"
     },
     {
       "orderId"  :"002",
@@ -29,12 +29,12 @@
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved",
-      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1639753753/products/Default_d0lenx.jpg"
     },
     {
       "orderId"  :"003",
       "orderDate" : "Dec 25, 2021",
-      "productName" : "ChristmasTree",
+      "productName" : "Tree",
       "productPrice" : 320.00,
       "productDescription" : "Christmas decoration tree",
       "productSize" : "L",
@@ -45,11 +45,11 @@
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved",
-      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1639753753/products/Default_d0lenx.jpg"
     },{
       "orderId"  :"004",
       "orderDate" : "Jan 01, 2021",
-      "productName" : "Monitors",
+      "productName" : "Monitor",
       "productPrice" : 120.00,
       "productDescription" : "15' Big Monitor",
       "productSize" : "L",
@@ -60,7 +60,7 @@
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved",
-      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1639753753/products/Default_d0lenx.jpg"
     },
     {
       "orderId"  :"005",
@@ -76,6 +76,6 @@
       "secondaryReasonToReturn": "Items arrived too late",
       "otherReasonToReturn": "Better price available",
       "returnEligibility" : "Approved",
-      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+      "imageUrl" : "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1639753753/products/Default_d0lenx.jpg"
     }
 ]

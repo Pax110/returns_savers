@@ -20,6 +20,8 @@
     "jspdf": "^2.4.0",
     "mongoose": "^6.0.13",
     "react-icons": "^4.3.1",
+    "react-toastify": "^8.1.0",
+    "toastify": "^2.0.1",
     "yup": "^0.32.11"
   }
 }

@@ -9,6 +9,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import { SidebarData} from './SidebarData'
 import './Navbar.css'
 import { IconContext} from 'react-icons'
+import {toast} from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const tryToast = () => {
+    toast.success("Logout Successful!")
+}
 
 const Navbar = ({username,setUser}) => {
  const navigate = useNavigate()
@@ -35,10 +42,17 @@ const Navbar = ({username,setUser}) => {
       <Link to="#" className="menu-bars"> 
         <FaIcons.FaBars onClick={showSidebar}/>
       </Link>
-       <label>{username && ' Hello ' + username }</label> 
-       {username && <button onClick={tryLogout} type="button" class="btn btn-info">Logout</button>
+       <label style={{justifyContent: 'center'}}><h4>{username && ' Hello ' + username + ' ' + ':)'}</h4></label> 
+       {username && <button onClick={()=>{
+        setTimeout(()=>{tryLogout()},1000)
+        tryToast()
+
+       }}
+        
+          type="button" class="btn btn-info">Logout</button>
 }
     </div>
+    <ToastContainer autoClose={1000} />
     
    
     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

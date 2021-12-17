@@ -19,7 +19,7 @@ const ReturnSavers = mongoose.model('ReturnSavers',
       "imageUrl": 
       {   
           type:String,
-          default: "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1638035909/products/Desktop_hvqdwz.jpg"
+          default: "https://res.cloudinary.com/dpzbcnzcb/image/upload/v1639753753/products/Default_d0lenx.jpg"
       }
 }
 )

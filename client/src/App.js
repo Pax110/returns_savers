@@ -22,7 +22,6 @@ import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 
-
 function App() {
   const [ user, setUser] = useState()
   

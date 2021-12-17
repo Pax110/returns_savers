@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-
 import './ReturnSaversDetail.css'
+import {toast} from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ReturnSaversEditForm = ({existingValues, onSave}) => {
     const [orderId, setOrderId] = useState('')
@@ -49,6 +51,13 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
         
     }
 
+    function tryToast () {
+        toast.success("New Return Saved!", {
+            position: toast.POSITION.TOP_CENTER
+          });
+          
+    }
+    
     return (
          <div>
             <h2>New Product Return Form</h2>
@@ -102,7 +111,13 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
                 {/* <label className="field-title">Return Eligibility</label>
                 <input value={returnEligibility} onChange={(event) => onInputUpdate(event, setReturnEligibility) } /> */}
                 <br/>
-                <button className="register-field-value" onClick={postData}>Save New Return</button>
+                <button className="register-field-value" onClick={()=>{
+                                                                
+                                                                tryToast()
+                                                                setTimeout(()=>{postData()},2000)
+                                                                
+                                                                }}>Save New Return</button>
+                <ToastContainer autoClose={2000}/>
             </div>
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
@@ -112,3 +127,14 @@ const ReturnSaversEditForm = ({existingValues, onSave}) => {
 }
 
 export default ReturnSaversEditForm
+
+
+// import {toast} from 'react-toastify'
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// const tryToast = () =>{
+//     toast.success("Success Notification !", {
+        
+//       });
+// } 
+// <ToastContainer autoClose={3000}/>

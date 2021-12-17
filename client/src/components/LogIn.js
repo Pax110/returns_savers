@@ -2,6 +2,9 @@ import  {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import './sidebar/Navbar.css'
+import {toast} from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const LogIn = ({setUser}) => {
     
     const [email, setEmail] = useState('')
@@ -10,8 +13,11 @@ const LogIn = ({setUser}) => {
     //const [logout,setLogout] = useState('')
     
     const navigate = useNavigate()
-    
+    const tryToast = () => {
+        toast.success("Login Successful!")
+    }
     function tryLogin() {
+        toast.success("Success Notification !")
         async function postLogin() {
             const loginInfo = {
                 email: email, 
@@ -58,6 +64,7 @@ const LogIn = ({setUser}) => {
         <br/>
         <div className="container"style={{width: "30%", align: "center"}}>
         <h2> Login </h2>
+        <ToastContainer autoClose={1000}/>
         <br/>
         <div className="row">
             <div className="col">
@@ -78,7 +85,10 @@ const LogIn = ({setUser}) => {
                 <input className="field-value"type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
         </div>
-        <button className="btn btn-primary mt-4" onClick={tryLogin}>Login</button>
+        <button className="btn btn-primary mt-4" onClick={()=>{
+                tryToast()
+                setTimeout(()=>{tryLogin()},1000)
+        }}>Login</button>
         </div>
        <br/>     
         <hr/>
@@ -93,7 +103,7 @@ const LogIn = ({setUser}) => {
     <br/>
     <br/>
     <br/>
-    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>
+    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>     <br/>  <br/>
     </div>
     </div>
 

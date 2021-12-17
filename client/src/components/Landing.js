@@ -54,27 +54,27 @@ const Landing = ({}) => {
     <h3 class="w3-opacity"><i>Return Savers: Platform services for online customers and retailers</i></h3>
     <br/>
     <h5 class="w3-justify">Did you know...a large % of items returned to online retailers end up in the landfill?</h5>
-    <p>
-    Free returns have made it easy for the customer to return items, but it is causing many issues for businesses!
-    </p>
-    <p>
+    <h5 class="w3-justify">
+    Free returns have made it easy for the customer to return items but it is causing many issues for businesses!
+    </h5>
+    <h5 class="w3-justify">
     Increase in transportation costs associated with returns
 Increase of costs associated with sorting and storing returned items
 it is easier and more cost effective to send it directly to a landfill
 We can shortcut a delivery --- A returned product can be re-directed to another customer in the same Area
 We can forward products witch do not qualify for re-sale to donation centers to help people in need
-</p>
+</h5>
 <h3>
 Our goal is: 
 </h3>
-<p>
+<h5 class="w3-justify">
 Increase profitability and efficiency of online retailers
 Reduce the carbon footprint of the majority of returned products
 Reduce the volume being added to landfills
 Increase Donated products to populations in need
    
 
-</p>
+</h5>
  
     
     
@@ -88,7 +88,7 @@ Increase Donated products to populations in need
 <br/>
 <br/>
 <br/>
-<br/> <br/> <br/> <br/> <br/>
+
 
 
 

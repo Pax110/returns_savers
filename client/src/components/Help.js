@@ -193,7 +193,7 @@ function Help() {
           </Form>
           </Container>    
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
     </div>
   );

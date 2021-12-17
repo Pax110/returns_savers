@@ -17,12 +17,23 @@ const Home = ({username}) => {
       <h2 class="w3-wide">Welcome</h2>
       <br/>
       <br/>
-      <h3 class="w3-opacity"><i>Hope you are as excited as us to be using Return Savers</i></h3>
+      <h3 class="w3-opacity"><i>We are excited to serve you at Return Savers</i></h3>
       <br/>
       <br/>
-      <h4 class="w3-justify">We are passionate about saving the environment one return at a time.  We are glad to have you on board and contributing to saving the environment</h4>
+      <h4 class="w3-justify">
+        We are passionate about saving the environment one return at a time, <br/>
+        and are glad to have you on board, contributing to saving the environment. <br/>
+        <br/>
+        Although we are sad to hear that you need to return your purchase, <br/>
+        we are thrilled to be assisting you through the process!<br/>
+        <br/>
+        Using our site will help reduce carbon emissions from transport trucks <br/>
+        and will keep tons of packages from ending up in land fills<br/>
+        It may even increase donations to local charities in your area<br/>
+        <br/>     
+       </h4>
       <div class="w3-row w3-padding-hor-32">
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/>
       </div>
     </div>
   </section>

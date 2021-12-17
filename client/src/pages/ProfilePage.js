@@ -8,6 +8,7 @@ function ProfilePage({username, firstname, lastname, email, address, province, c
             <Profile username={username} firstname={firstname} 
             lastname={lastname} email={email} address={address} city={city} 
             province={province} postalCode={postalCode}/>
+            <br/>
         </div>
     )
 }

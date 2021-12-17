@@ -61,14 +61,14 @@ function AboutUs() {
                          </Card.Title>
                          <Card.Text >
                          <p className='text-justify'>
-                             Geetha was born and brought up in India. She has done engineering in 'Electronics
+                             Geetha was born and raised in India. She has done engineering in 'Electronics
                              and Instrumentation' and started working as a software developer. After marriage,
                              She moved to Fort McMurray in Canada. She gained customer service experience in 
-                             Tim Hortons and Papa Johns. Later again back to school in SAIT and studied 'Object 
-                             Oriented Software Developer' fast track course. Then joined in Canadian Natural Resource
-                             Limited and worked as 'Information System Analyst' for 3 years. Then she has taken 3 years
-                             maternity break. Now she is in the process of pivoting her career into various tech
-                             and becoming a Full-Stack Developer currently learning at InceptionU.                             
+                             Tim Hortons and Papa Johns. She went back to school at SAIT and studied 'Object 
+                             Oriented Software Developer' fast track course. She joined Canadian Natural Resource
+                             Ltd. and worked as an 'Information System Analyst' for 3 years. Then she took 3 years for
+                             maternity break. Currently she is in the process of pivoting her career into various tech
+                             and becoming a Full-Stack Developer currently enrolled at InceptionU.                             
                              </p>              
                          </Card.Text>
                          <Button onClick={()=>{setShowStory1(!showStory1)}}>
@@ -111,8 +111,8 @@ function AboutUs() {
                              Pax was born and brought up in India. 
                              He moved to Canada in 2014.                         
                              He went to school for Robotics Engineering.
-                             His previous work experience is in Automation Industry.                            
-                             He is in the process of pivoting her career into Development
+                             His previous work experience is in the Automation Industry.                            
+                             He is in the process of pivoting his career into Development
                              and becoming a Full-Stack Developer currently learning
                              at InceptionU.                    
                          </Card.Text>
@@ -158,17 +158,13 @@ function AboutUs() {
                              two World Age Group Championships and represented Canada in both Germany and NewZealand.
                              She then started a family and had 3 children.  As a single mom, she went back to school 
                              for Petroleum Engineering Technology at SAIT.<br/>
-                             Her father was a Geophysicist in the petroleum industry after moving here from Australia and
-                             Andrea's love of geology and engineering was what initially brought her interest to the field.<br/>
                              She has over 15 years of experience in a variety of Oil & Gas specializations
                              such as Waterflood, Reservoir, Exploitation, Production Optimization, Budget,
-                             Reserves and Acquisitions & Divestitures where she liked to use a mixture of analytical and creative thinking
-                             to tackle challenging projects.<br/>
-                             As we know, the industry has been going through some hard times lately.<br/>
+                             Reserves and Acquisitions & Divestitures where she liked to use a mixture of analytical and 
+                             creative thinking to tackle challenging projects.<br/>
                              She is in the process of pivoting her career into Tech
-                             and becoming a Full-Stack Developer currently learning
-                             at InceptionU.  Her career pivot has been an adventure
-                             and she is excited to bring these skills into her future endeavours.                    
+                             and becoming a Full-Stack Developer.  She is currently enrolled
+                             at InceptionU.                   
                          </Card.Text>
                          <Button onClick={()=>{setShowStory3(!showStory3)}}>
                              Click here for our Summary

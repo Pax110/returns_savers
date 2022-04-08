@@ -77,7 +77,7 @@ router.get('/userList', async (req, res) => {
 })
 
 router.get('/loggedInUser', function(req, res) {
-    console.log("in auth routes, sending req.user", req.user)
+  
     res.send(req.user)
 }) 
 

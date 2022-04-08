@@ -3,11 +3,11 @@ import { toast } from 'react-toastify';
 import PdfGenerate from '../components/pdfGenerate'
 import './ReturnSaversDetail.css'
 import { Link } from 'react-router-dom'
-import { ToastContainer } from 'react-bootstrap';
 
 const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,province,postalCode}) => {
 
     const [returns, setReturns] = useState('')
+    const [ user, setUser] = useState()
    
     useEffect(()=>{
       const fetchReturns = async () => {
@@ -20,7 +20,6 @@ const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,
     },[productReturnId])
   
     
-    const [ user, setUser] = useState()
   
     useEffect(()=>{
       const getUser = async () => {
@@ -37,19 +36,13 @@ const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,
     },[])
 
     
-    function toastifyF () {
-      console.log("Click")
-      toast.success("Success Notification !", {
-        position: toast.POSITION.TOP_CENTER
-      })
-
-    }
+    
     
     
     return(
       <div>
         <h2>Return Savers Detail</h2>
-       {console.log('same fetch call that was in App', user)}
+      
         <div className="detail-fields">
             <div className="field-title">OrderId</div>
             <div className="register-field-value">{returns?.orderId}</div>
@@ -68,7 +61,7 @@ const ReturnSaversDetail = ({productReturnId, firstname, lastname, address,city,
       
         <Link type="button" to="edit">Edit</Link>
         
-        <button onClick={toastifyF}></button>
+        
         
           {returns?.returnEligibility === 'Approved' && 
           <PdfGenerate address={address} lastname={lastname} firstname={firstname} city={city} province={province} postalCode={postalCode}/>
